@@ -6,7 +6,6 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockBreakable;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.client.main.Main;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.player.EntityPlayer;
@@ -22,7 +21,7 @@ public class Blocklava extends BlockBreakable{
 
 	public Blocklava(Material tnt) {
         super(Material.tnt, false);
-        this.setTickRandomly(true);
+        this.setTickRandomly(false);
         this.setHardness(0.5F);
         this.setLightLevel(1.0F);
         this.setCreativeTab(CreativeTabs.tabBlock);
@@ -30,32 +29,11 @@ public class Blocklava extends BlockBreakable{
 	
 	public void harvestBlock(World worldIn, EntityPlayer player, BlockPos pos, IBlockState state, TileEntity te)
     {
-        player.triggerAchievement(StatList.mineBlockStatArray[Block.getIdFromBlock(this)]);
         player.addExhaustion(0.025F);
 
-        if (this.canSilkHarvest(worldIn, pos, worldIn.getBlockState(pos), player) && EnchantmentHelper.getSilkTouchModifier(player))
-        {
-            java.util.List<ItemStack> items = new java.util.ArrayList<ItemStack>();
-            ItemStack itemstack = this.createStackedBlock(state);
 
-            if (itemstack != null) items.add(itemstack);
-
-            net.minecraftforge.event.ForgeEventFactory.fireBlockHarvesting(items, worldIn, pos, worldIn.getBlockState(pos), 0, 1.0f, true, player);
-
-            for (ItemStack is : items)
-                spawnAsEntity(worldIn, pos, is);
-        }
-        else
-        {
-            if (worldIn.provider.doesWaterVaporize())
-            {
-                worldIn.setBlockToAir(pos);
-                return;
-            }
-
-            int i = EnchantmentHelper.getFortuneModifier(player);
             harvesters.set(player);
-            this.dropBlockAsItem(worldIn, pos, state, i);
+            this.dropBlockAsItem(worldIn, pos, state);
             harvesters.set(null);
             Material material = worldIn.getBlockState(pos.down()).getBlock().getMaterial();
 
@@ -64,8 +42,13 @@ public class Blocklava extends BlockBreakable{
                 worldIn.setBlockState(pos, Blocks.flowing_lava.getDefaultState());
             }
         }
-    }
+    
 	
+	private void dropBlockAsItem(World worldIn, BlockPos pos, IBlockState state) {
+		// TODO Auto-generated method stub
+		
+	}
+
 	public int quantityDropped(Random random)
     {
         return 0;
@@ -75,15 +58,8 @@ public class Blocklava extends BlockBreakable{
     {
         if (worldIn.getLightFor(EnumSkyBlock.BLOCK, pos) > 11 - this.getLightOpacity())
         {
-            if (worldIn.provider.doesWaterVaporize())
-            {
-                worldIn.setBlockToAir(pos);
-            }
-            else
-            {
                 this.dropBlockAsItem(worldIn, pos, worldIn.getBlockState(pos), 0);
                 worldIn.setBlockState(pos, Blocks.lava.getDefaultState());
-            }
         }
     }
 

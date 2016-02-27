@@ -1,5 +1,5 @@
 {
     "variants": {
-        "normal": { "model": "sa:lamp_block" }
+        "normal": {"model": "sa:lamp_block"}
     }
 }

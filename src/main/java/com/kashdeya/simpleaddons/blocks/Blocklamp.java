@@ -4,6 +4,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.creativetab.CreativeTabs;
 
 public class Blocklamp extends Block{
 
@@ -13,6 +14,7 @@ public class Blocklamp extends Block{
 		this.setLightLevel(1.0F);
 		this.setLightOpacity(1);
 		this.setStepSound(soundTypeGlass);
+		this.setCreativeTab(CreativeTabs.tabBlock);
 	}
 
 }
