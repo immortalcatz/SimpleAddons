@@ -17,10 +17,10 @@ import net.minecraft.util.BlockPos;
 import net.minecraft.world.EnumSkyBlock;
 import net.minecraft.world.World;
 
-public class Blocklava extends BlockBreakable{
+public class Blocklava extends Block{
 
 	public Blocklava(Material tnt) {
-        super(Material.tnt, false);
+        super(Material.tnt);
         this.setTickRandomly(false);
         this.setHardness(0.5F);
         this.setLightLevel(1.0F);
@@ -31,10 +31,6 @@ public class Blocklava extends BlockBreakable{
     {
         player.addExhaustion(0.025F);
 
-
-            harvesters.set(player);
-            this.dropBlockAsItem(worldIn, pos, state);
-            harvesters.set(null);
             Material material = worldIn.getBlockState(pos.down()).getBlock().getMaterial();
 
             if (material.blocksMovement() || material.isLiquid())
@@ -44,11 +40,6 @@ public class Blocklava extends BlockBreakable{
         }
     
 	
-	private void dropBlockAsItem(World worldIn, BlockPos pos, IBlockState state) {
-		// TODO Auto-generated method stub
-		
-	}
-
 	public int quantityDropped(Random random)
     {
         return 0;
