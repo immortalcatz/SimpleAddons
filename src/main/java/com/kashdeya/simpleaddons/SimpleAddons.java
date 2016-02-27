@@ -9,6 +9,8 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 import com.kashdeya.simpleaddons.init.SimpleAddonsBlocks;
 import com.kashdeya.simpleaddons.proxy.CommonProxy;
+import com.kashdeya.simpleaddons.recipes.CraftingRecipes;
+import com.kashdeya.simpleaddons.recipes.FurnaceRecipes;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION)
 
@@ -27,6 +29,8 @@ public class SimpleAddons {
 	@EventHandler
 	public void init(FMLInitializationEvent event){
 		proxy.registerRenders();
+		CraftingRecipes.registerCraftingRecipies();
+		FurnaceRecipes.registerFurnaceRecipies();
 	}
 	
 	@EventHandler
