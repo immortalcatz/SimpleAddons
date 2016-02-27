@@ -1,0 +1,4 @@
+tile.lamp_block.name=Lamp
+tile.lava_block.name=Lava Crystal
+
+itemGroup.tabSimpleAddons=Simple Addons

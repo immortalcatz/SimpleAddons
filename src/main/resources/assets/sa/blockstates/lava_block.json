@@ -1,0 +1,5 @@
+{
+    "variants": {
+        "normal": { "model": "sa:lava_block" }
+    }
+}
