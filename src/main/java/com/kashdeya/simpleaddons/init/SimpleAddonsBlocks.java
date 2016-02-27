@@ -18,7 +18,7 @@ public class SimpleAddonsBlocks {
 	
 	public static void init(){
 		lamp_block = new Blocklamp(Material.glass).setUnlocalizedName("lamp_block");
-		lava_block = new Blocklava(Material.tnt).setUnlocalizedName("lava_block");
+		lava_block = new Blocklava(Material.redstoneLight).setUnlocalizedName("lava_block");
 	}
 	public static void register(){
 		GameRegistry.registerBlock(lamp_block, lamp_block.getUnlocalizedName().substring(5));

@@ -19,9 +19,8 @@ import net.minecraft.world.World;
 
 public class Blocklava extends Block{
 
-	public Blocklava(Material tnt) {
-        super(Material.tnt);
-        this.setTickRandomly(false);
+	public Blocklava(Material material) {
+        super(Material.redstoneLight);
         this.setHardness(0.5F);
         this.setLightLevel(1.0F);
         this.setCreativeTab(CreativeTabs.tabBlock);
@@ -30,28 +29,14 @@ public class Blocklava extends Block{
 	public void harvestBlock(World worldIn, EntityPlayer player, BlockPos pos, IBlockState state, TileEntity te)
     {
         player.addExhaustion(0.025F);
-
-            Material material = worldIn.getBlockState(pos.down()).getBlock().getMaterial();
-
-            if (material.blocksMovement() || material.isLiquid())
-            {
+        
                 worldIn.setBlockState(pos, Blocks.flowing_lava.getDefaultState());
-            }
         }
     
 	
 	public int quantityDropped(Random random)
     {
         return 0;
-    }
-
-    public void updateTick(World worldIn, BlockPos pos, IBlockState state, Random rand)
-    {
-        if (worldIn.getLightFor(EnumSkyBlock.BLOCK, pos) > 11 - this.getLightOpacity())
-        {
-                this.dropBlockAsItem(worldIn, pos, worldIn.getBlockState(pos), 0);
-                worldIn.setBlockState(pos, Blocks.lava.getDefaultState());
-        }
     }
 
     public int getMobilityFlag()
