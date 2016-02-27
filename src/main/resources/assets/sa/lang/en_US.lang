@@ -1,4 +1,9 @@
 tile.lamp_block.name=Lamp
 tile.lava_block.name=Lava Crystal
+item.bacon.name=Uncooked Bacon
+item.cooked_bacon.name=Cooked Bacon
+item.knife.name=Knife
+item.monster_jerky.name=Monster Jerky
+item.toast.name=Toast
 
 itemGroup.tabSimpleAddons=Simple Addons

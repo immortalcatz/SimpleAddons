@@ -8,6 +8,8 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 import com.kashdeya.simpleaddons.init.SimpleAddonsBlocks;
+import com.kashdeya.simpleaddons.init.SimpleAddonsFood;
+import com.kashdeya.simpleaddons.init.SimpleAddonsItems;
 import com.kashdeya.simpleaddons.proxy.CommonProxy;
 import com.kashdeya.simpleaddons.recipes.CraftingRecipes;
 import com.kashdeya.simpleaddons.recipes.FurnaceRecipes;
@@ -24,6 +26,10 @@ public class SimpleAddons {
 	public void preInit(FMLPreInitializationEvent event){
 		SimpleAddonsBlocks.init();
 		SimpleAddonsBlocks.register();
+		SimpleAddonsItems.init();
+		SimpleAddonsItems.register();
+		SimpleAddonsFood.init();
+		SimpleAddonsFood.register();
 	}
 	
 	@EventHandler
