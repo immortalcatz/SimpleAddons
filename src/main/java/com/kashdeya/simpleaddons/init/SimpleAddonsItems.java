@@ -13,11 +13,13 @@ import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class SimpleAddonsItems {
+	
+	public static final Item.ToolMaterial knifeMaterial = EnumHelper.addToolMaterial("knifeMaterial", 1, 100, 1.0F, 0.5F, 1);
 
 	public static Item knife;
 	
 	public static void init(){
-		knife = new Itemknife().setUnlocalizedName("knife");
+		knife = new Itemknife(knifeMaterial).setUnlocalizedName("knife");
 
 	}
 	
