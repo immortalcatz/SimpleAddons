@@ -19,7 +19,7 @@ public class SimpleAddonsItems {
 	public static Item knife;
 	
 	public static void init(){
-		knife = new Itemknife(null, knifeMaterial).setUnlocalizedName("knife");
+		knife = new Itemknife("knife", 100, knifeMaterial).setUnlocalizedName("knife");
 
 	}
 	

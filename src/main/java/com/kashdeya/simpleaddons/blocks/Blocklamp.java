@@ -1,5 +1,7 @@
 package com.kashdeya.simpleaddons.blocks;
 
+import com.kashdeya.simpleaddons.SimpleAddons;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
@@ -14,7 +16,7 @@ public class Blocklamp extends Block{
 		this.setLightLevel(1.0F);
 		this.setLightOpacity(1);
 		this.setStepSound(soundTypeGlass);
-		this.setCreativeTab(CreativeTabs.tabBlock);
+		this.setCreativeTab(SimpleAddons.items);
 	}
 
 }

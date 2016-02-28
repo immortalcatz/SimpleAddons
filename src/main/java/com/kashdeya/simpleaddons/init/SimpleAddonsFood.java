@@ -1,6 +1,7 @@
 package com.kashdeya.simpleaddons.init;
 
 import com.kashdeya.simpleaddons.Reference;
+import com.kashdeya.simpleaddons.SimpleAddons;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.model.ModelResourceLocation;
@@ -29,10 +30,10 @@ public class SimpleAddonsFood extends ItemFood{
 	}
 
 	public static void init(){
-		bacon = new SimpleAddonsFood(1, 0.1F, true).setUnlocalizedName("bacon");
-		cooked_bacon = new SimpleAddonsFood(3, 0.3F, true).setUnlocalizedName("cooked_bacon");
-		monster_jerky = new SimpleAddonsFood(4, 0.5F, true).setUnlocalizedName("monster_jerky");
-		toast = new SimpleAddonsFood(7, 1.2F, true).setUnlocalizedName("toast");
+		bacon = new SimpleAddonsFood(1, 0.1F, true).setUnlocalizedName("bacon").setCreativeTab(SimpleAddons.items);
+		cooked_bacon = new SimpleAddonsFood(3, 0.3F, true).setUnlocalizedName("cooked_bacon").setCreativeTab(SimpleAddons.items);
+		monster_jerky = new SimpleAddonsFood(4, 0.5F, true).setUnlocalizedName("monster_jerky").setCreativeTab(SimpleAddons.items);
+		toast = new SimpleAddonsFood(7, 1.2F, true).setUnlocalizedName("toast").setCreativeTab(SimpleAddons.items);
 		
 	}
 	

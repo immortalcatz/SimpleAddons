@@ -4,6 +4,7 @@ import java.util.Map;
 import java.util.Random;
 
 import com.google.common.collect.Maps;
+import com.kashdeya.simpleaddons.SimpleAddons;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockTNT;
@@ -33,7 +34,7 @@ public class Blocklava extends Block{
         this.setHardness(0.5F);
         this.setLightLevel(1.0F);
         this.setStepSound(soundTypeStone);
-        this.setCreativeTab(CreativeTabs.tabBlock);
+        this.setCreativeTab(SimpleAddons.items);
     }
 	
 	public void harvestBlock(World worldIn, EntityPlayer player, BlockPos pos, IBlockState state, TileEntity te)

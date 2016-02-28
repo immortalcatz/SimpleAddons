@@ -5,5 +5,4 @@ item.cooked_bacon.name=Cooked Bacon
 item.knife.name=Knife
 item.monster_jerky.name=Monster Jerky
 item.toast.name=Toast
-
-itemGroup.tabSimpleAddons=Simple Addons
+itemGroup.SimpleAddons=Simple Addons
