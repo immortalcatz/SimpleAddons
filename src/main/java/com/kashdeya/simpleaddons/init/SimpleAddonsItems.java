@@ -14,7 +14,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class SimpleAddonsItems {
 	
-	public static final Item.ToolMaterial knifeMaterial = EnumHelper.addToolMaterial("knifeMaterial", 1, 100, 1.0F, 0.5F, 1);
+	public static final Item.ToolMaterial knifeMaterial = EnumHelper.addToolMaterial("knifeMaterial", 1, 100, 0.2F, 0.1F, 1);
 
 	public static Item knife;
 	
