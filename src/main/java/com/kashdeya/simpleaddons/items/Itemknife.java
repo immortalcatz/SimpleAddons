@@ -11,6 +11,7 @@ public class Itemknife extends ItemSword{
 
 	public Itemknife() {
 		super(ToolMaterial.WOOD);
+		this.setMaxDamage(100);
 		this.setCreativeTab(CreativeTabs.tabFood);
 	}
 

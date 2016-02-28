@@ -17,7 +17,7 @@ public class SimpleAddonsItems {
 	public static Item knife;
 	
 	public static void init(){
-		knife = new Itemknife().setMaxDamage(100).setUnlocalizedName("knife");
+		knife = new Itemknife().setUnlocalizedName("knife");
 
 	}
 	
