@@ -3,6 +3,7 @@ package com.kashdeya.simpleaddons.init;
 import scala.collection.mutable.Stack;
 
 import com.kashdeya.simpleaddons.Reference;
+import com.kashdeya.simpleaddons.SimpleAddons;
 import com.kashdeya.simpleaddons.items.Itemjuicer;
 import com.kashdeya.simpleaddons.items.Itemknife;
 
@@ -24,7 +25,7 @@ public class SimpleAddonsItems {
 	public static void init(){
 		knife = new Itemknife("knife", 100, knifeMaterial).setUnlocalizedName("knife");
 		item_juicer = new Itemjuicer("item_juicer", 100, knifeMaterial).setUnlocalizedName("item_juicer");
-		item_plate = new Item().setUnlocalizedName("item_plate");
+		item_plate = new Item().setUnlocalizedName("item_plate").setCreativeTab(SimpleAddons.items);;
 
 	}
 	

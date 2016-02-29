@@ -22,6 +22,9 @@ public class SimpleAddonsFood extends ItemFood{
 	public static Item fried_egg;
 	public static Item cooked_mushroom_brown;
 	public static Item cooked_mushroom_red;
+	public static Item apple_juice;
+	public static Item carrot_juice;
+	public static Item bacon_eggs;
 
 	public SimpleAddonsFood(int amount, float saturation, boolean isWolfFood) {
 		super(amount, saturation, isWolfFood);
@@ -37,9 +40,12 @@ public class SimpleAddonsFood extends ItemFood{
 		cooked_bacon = new SimpleAddonsFood(3, 0.3F, true).setUnlocalizedName("cooked_bacon").setCreativeTab(SimpleAddons.items);
 		monster_jerky = new SimpleAddonsFood(4, 0.5F, true).setUnlocalizedName("monster_jerky").setCreativeTab(SimpleAddons.items);
 		toast = new SimpleAddonsFood(7, 1.2F, true).setUnlocalizedName("toast").setCreativeTab(SimpleAddons.items);
-		fried_egg = new SimpleAddonsFood(2, 03F, true).setUnlocalizedName("fried_egg").setCreativeTab(SimpleAddons.items);
-		cooked_mushroom_brown = new SimpleAddonsFood(2, 03F, true).setUnlocalizedName("cooked_mushroom_brown").setCreativeTab(SimpleAddons.items);
-		cooked_mushroom_red = new SimpleAddonsFood(2, 03F, true).setUnlocalizedName("cooked_mushroom_red").setCreativeTab(SimpleAddons.items);
+		fried_egg = new SimpleAddonsFood(5, 06F, true).setUnlocalizedName("fried_egg").setCreativeTab(SimpleAddons.items);
+		cooked_mushroom_brown = new SimpleAddonsFood(2, 03F, false).setUnlocalizedName("cooked_mushroom_brown").setCreativeTab(SimpleAddons.items);
+		cooked_mushroom_red = new SimpleAddonsFood(2, 03F, false).setUnlocalizedName("cooked_mushroom_red").setCreativeTab(SimpleAddons.items);
+		apple_juice = new SimpleAddonsFood(6, 0.6F, false).setUnlocalizedName("apple_juice").setCreativeTab(SimpleAddons.items);
+		carrot_juice = new SimpleAddonsFood(4, 0.6F, false).setUnlocalizedName("carrot_juice").setCreativeTab(SimpleAddons.items);
+		bacon_eggs = new SimpleAddonsFood(6, 0.7F, false).setUnlocalizedName("bacon_eggs").setCreativeTab(SimpleAddons.items);
 	}
 	
 	public static void register(){
@@ -50,6 +56,9 @@ public class SimpleAddonsFood extends ItemFood{
 		GameRegistry.registerItem(fried_egg, fried_egg.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(cooked_mushroom_brown, cooked_mushroom_brown.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(cooked_mushroom_red, cooked_mushroom_red.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(apple_juice, apple_juice.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(carrot_juice, carrot_juice.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(bacon_eggs, bacon_eggs.getUnlocalizedName().substring(5));
 	}
 	
 	public static void registerRenders(){
@@ -60,6 +69,9 @@ public class SimpleAddonsFood extends ItemFood{
 		registerRender(fried_egg);
 		registerRender(cooked_mushroom_brown);
 		registerRender(cooked_mushroom_red);
+		registerRender(apple_juice);
+		registerRender(carrot_juice);
+		registerRender(bacon_eggs);
 	}
 	
 	public static void registerRender(Item item){
