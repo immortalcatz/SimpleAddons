@@ -26,7 +26,6 @@ public class SimpleAddonsItems {
 		knife = new Itemknife("knife", 100, knifeMaterial).setUnlocalizedName("knife");
 		item_juicer = new Itemjuicer("item_juicer", 100, knifeMaterial).setUnlocalizedName("item_juicer");
 		item_plate = new Item().setUnlocalizedName("item_plate").setCreativeTab(SimpleAddons.items);;
-
 	}
 	
 	public static void register(){
