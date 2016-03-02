@@ -1,14 +1,19 @@
 package com.kashdeya.simpleaddons.init;
 
 import com.kashdeya.simpleaddons.Reference;
+import com.kashdeya.simpleaddons.blocks.Blockcharcoal;
 import com.kashdeya.simpleaddons.blocks.Blocklamp;
 import com.kashdeya.simpleaddons.blocks.Blocklava;
+import com.kashdeya.simpleaddons.blocks.Blockwater;
+import com.kashdeya.simpleaddons.handlers.FuelHandler;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.item.Item;
+import net.minecraftforge.fml.common.Mod.EventHandler;
+import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class SimpleAddonsBlocks {
@@ -31,6 +36,8 @@ public class SimpleAddonsBlocks {
 	public static Block lamp_block_white;
 	public static Block lamp_block_yellow;
 	public static Block lava_block;
+	public static Block charcoal_block;
+	public static Block water_block;
 	
 	public static void init(){
 		lamp_block = new Blocklamp(Material.glass).setUnlocalizedName("lamp_block");
@@ -51,6 +58,8 @@ public class SimpleAddonsBlocks {
 		lamp_block_white = new Blocklamp(Material.glass).setUnlocalizedName("lamp_block_white");
 		lamp_block_yellow = new Blocklamp(Material.glass).setUnlocalizedName("lamp_block_yellow");
 		lava_block = new Blocklava(Material.redstoneLight).setUnlocalizedName("lava_block");
+		charcoal_block = new Blockcharcoal(Material.rock).setUnlocalizedName("charcoal_block");
+		water_block = new Blockwater(Material.rock).setUnlocalizedName("water_block");
 	}
 	public static void register(){
 		GameRegistry.registerBlock(lamp_block, lamp_block.getUnlocalizedName().substring(5));
@@ -71,6 +80,9 @@ public class SimpleAddonsBlocks {
 		GameRegistry.registerBlock(lamp_block_white, lamp_block_white.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(lamp_block_yellow, lamp_block_yellow.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(lava_block, lava_block.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(charcoal_block, charcoal_block.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(water_block, water_block.getUnlocalizedName().substring(5));
+		GameRegistry.registerFuelHandler(new FuelHandler());
 	}
 	
 	public static void registerRenders(){
@@ -92,6 +104,8 @@ public class SimpleAddonsBlocks {
 		registerRender(lamp_block_white);
 		registerRender(lamp_block_yellow);
 		registerRender(lava_block);
+		registerRender(charcoal_block);
+		registerRender(water_block);
 	}
 	
 	public static void registerRender(Block block){

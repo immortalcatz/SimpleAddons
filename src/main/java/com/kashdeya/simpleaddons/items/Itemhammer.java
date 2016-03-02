@@ -2,23 +2,20 @@ package com.kashdeya.simpleaddons.items;
 
 import java.util.List;
 
-import com.kashdeya.simpleaddons.SimpleAddons;
-import com.kashdeya.simpleaddons.init.SimpleAddonsItems;
-
-import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemSword;
-import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.ItemSword;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class Itemknife extends ItemSword{
+import com.kashdeya.simpleaddons.SimpleAddons;
+
+public class Itemhammer extends ItemSword{
 	
 	private float attackDamage;
 
-	public Itemknife(String name, int durability, ToolMaterial material) {
+	public Itemhammer(String name, int durability, ToolMaterial material) {
 		super(material);
 		super.setMaxDamage(durability);
 		this.setFull3D();
@@ -26,15 +23,14 @@ public class Itemknife extends ItemSword{
 		super.setContainerItem(this);
 		super.showDurabilityBar(new ItemStack(this));
 		this.setCreativeTab(SimpleAddons.items);
-		this.attackDamage = 2.0F;
-		
+		this.attackDamage = 3.0F + material.getDamageVsEntity();
 	}
 	
 	public boolean doesContainerItemLeaveCraftingGrid(ItemStack stack)
 	{
 		return false;
 	}
-	
+
 	@SideOnly(Side.CLIENT)
     public void getSubItems(Item itemIn, CreativeTabs tab, List<ItemStack> subItems)
     {
@@ -46,7 +42,7 @@ public class Itemknife extends ItemSword{
 	{
 		ItemStack stack = itemStack.copy();
 
-		stack.setItemDamage(stack.getItemDamage() + 1);
+		stack.setItemDamage(stack.getItemDamage() + 4);
 		stack.stackSize = 1;
 
 		return stack;

@@ -24,6 +24,7 @@ public class SimpleAddonsFood extends ItemFood{
 	public static Item cooked_mushroom_red;
 	public static Item apple_juice;
 	public static Item carrot_juice;
+	public static Item cactus_juice;
 	public static Item bacon_eggs;
 
 	public SimpleAddonsFood(int amount, float saturation, boolean isWolfFood) {
@@ -45,6 +46,7 @@ public class SimpleAddonsFood extends ItemFood{
 		cooked_mushroom_red = new SimpleAddonsFood(2, 03F, false).setUnlocalizedName("cooked_mushroom_red").setCreativeTab(SimpleAddons.items);
 		apple_juice = new SimpleAddonsFood(6, 0.6F, false).setUnlocalizedName("apple_juice").setCreativeTab(SimpleAddons.items);
 		carrot_juice = new SimpleAddonsFood(4, 0.6F, false).setUnlocalizedName("carrot_juice").setCreativeTab(SimpleAddons.items);
+		cactus_juice = new SimpleAddonsFood(4, 0.6F, false).setUnlocalizedName("cactus_juice").setCreativeTab(SimpleAddons.items);
 		bacon_eggs = new SimpleAddonsFood(6, 0.7F, false).setUnlocalizedName("bacon_eggs").setCreativeTab(SimpleAddons.items);
 	}
 	
@@ -58,6 +60,7 @@ public class SimpleAddonsFood extends ItemFood{
 		GameRegistry.registerItem(cooked_mushroom_red, cooked_mushroom_red.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(apple_juice, apple_juice.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(carrot_juice, carrot_juice.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(cactus_juice, cactus_juice.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(bacon_eggs, bacon_eggs.getUnlocalizedName().substring(5));
 	}
 	
@@ -71,6 +74,7 @@ public class SimpleAddonsFood extends ItemFood{
 		registerRender(cooked_mushroom_red);
 		registerRender(apple_juice);
 		registerRender(carrot_juice);
+		registerRender(cactus_juice);
 		registerRender(bacon_eggs);
 	}
 	

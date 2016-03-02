@@ -1,0 +1,5 @@
+{
+    "variants": {
+        "normal": {"model": "sa:water_block"}
+    }
+}

@@ -42,6 +42,7 @@ public class SimpleAddons {
 	@EventHandler
 	public void init(FMLInitializationEvent event){
 		proxy.registerRenders();
+		proxy.registerWorldGenerators();
 		CraftingRecipes.registerCraftingRecipies();
 		FurnaceRecipes.registerFurnaceRecipies();
 	}
