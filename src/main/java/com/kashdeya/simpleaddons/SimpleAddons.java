@@ -25,7 +25,7 @@ public class SimpleAddons {
 	@SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.SERVER_PROXY_CLASS)
 	public static CommonProxy proxy;
 	
-	public static CreativeTabs items = new TabSimpleAddons("SimpleAddons");	
+	public static CreativeTabs items = new TabSimpleAddons("SimpleAddons");
 	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event){

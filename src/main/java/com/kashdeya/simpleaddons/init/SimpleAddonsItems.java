@@ -1,19 +1,16 @@
 package com.kashdeya.simpleaddons.init;
 
-import scala.collection.mutable.Stack;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.resources.model.ModelResourceLocation;
+import net.minecraft.item.Item;
+import net.minecraftforge.common.util.EnumHelper;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 import com.kashdeya.simpleaddons.Reference;
 import com.kashdeya.simpleaddons.SimpleAddons;
 import com.kashdeya.simpleaddons.items.Itemhammer;
 import com.kashdeya.simpleaddons.items.Itemjuicer;
 import com.kashdeya.simpleaddons.items.Itemknife;
-
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.resources.model.ModelResourceLocation;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraftforge.common.util.EnumHelper;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class SimpleAddonsItems {
 	

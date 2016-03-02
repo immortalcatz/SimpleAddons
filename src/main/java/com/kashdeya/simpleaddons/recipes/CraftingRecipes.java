@@ -71,9 +71,9 @@ public class CraftingRecipes {
 		}
 		else{
 			GameRegistry.addShapedRecipe(new ItemStack(SimpleAddonsItems.item_juicer), new Object[] {" S ", "S S", "SSS", 'S', Blocks.stone});
-			GameRegistry.addShapelessRecipe(new ItemStack(SimpleAddonsFood.apple_juice), new Object[] {Items.apple, Items.glass_bottle, SimpleAddonsItems.item_juicer});
-			GameRegistry.addShapelessRecipe(new ItemStack(SimpleAddonsFood.carrot_juice), new Object[] {Items.carrot, Items.glass_bottle, SimpleAddonsItems.item_juicer});
-			GameRegistry.addShapelessRecipe(new ItemStack(SimpleAddonsFood.cactus_juice), new Object[] {Blocks.cactus, Items.glass_bottle, SimpleAddonsItems.item_juicer});
+			GameRegistry.addShapelessRecipe(new ItemStack(SimpleAddonsFood.apple_juice), new Object[] {Items.apple, Items.glass_bottle, new ItemStack(SimpleAddonsItems.item_juicer, 1, OreDictionary.WILDCARD_VALUE)});
+			GameRegistry.addShapelessRecipe(new ItemStack(SimpleAddonsFood.carrot_juice), new Object[] {Items.carrot, Items.glass_bottle, new ItemStack(SimpleAddonsItems.item_juicer, 1, OreDictionary.WILDCARD_VALUE)});
+			GameRegistry.addShapelessRecipe(new ItemStack(SimpleAddonsFood.cactus_juice), new Object[] {Blocks.cactus, Items.glass_bottle, new ItemStack(SimpleAddonsItems.item_juicer, 1, OreDictionary.WILDCARD_VALUE)});
 		}
 		
 		if (baconOff){

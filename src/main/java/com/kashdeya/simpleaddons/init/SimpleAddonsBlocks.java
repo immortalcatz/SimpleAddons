@@ -1,20 +1,18 @@
 package com.kashdeya.simpleaddons.init;
 
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.resources.model.ModelResourceLocation;
+import net.minecraft.item.Item;
+import net.minecraftforge.fml.common.registry.GameRegistry;
+
 import com.kashdeya.simpleaddons.Reference;
 import com.kashdeya.simpleaddons.blocks.Blockcharcoal;
 import com.kashdeya.simpleaddons.blocks.Blocklamp;
 import com.kashdeya.simpleaddons.blocks.Blocklava;
 import com.kashdeya.simpleaddons.blocks.Blockwater;
 import com.kashdeya.simpleaddons.handlers.FuelHandler;
-
-import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.resources.model.ModelResourceLocation;
-import net.minecraft.item.Item;
-import net.minecraftforge.fml.common.Mod.EventHandler;
-import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class SimpleAddonsBlocks {
 	
