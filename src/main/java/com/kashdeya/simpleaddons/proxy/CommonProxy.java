@@ -1,8 +1,8 @@
 package com.kashdeya.simpleaddons.proxy;
 
-import com.kashdeya.simpleaddons.worldgen.OreGen;
-
 import net.minecraftforge.fml.common.registry.GameRegistry;
+
+import com.kashdeya.simpleaddons.worldgen.OreGen;
 
 public class CommonProxy {
     

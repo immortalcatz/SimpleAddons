@@ -11,6 +11,7 @@ import com.kashdeya.simpleaddons.Reference;
 import com.kashdeya.simpleaddons.blocks.Blockcharcoal;
 import com.kashdeya.simpleaddons.blocks.Blocklamp;
 import com.kashdeya.simpleaddons.blocks.Blocklava;
+import com.kashdeya.simpleaddons.blocks.Blockreed;
 import com.kashdeya.simpleaddons.blocks.Blockwater;
 import com.kashdeya.simpleaddons.handlers.FuelHandler;
 
@@ -36,6 +37,7 @@ public class SimpleAddonsBlocks {
 	public static Block lava_block;
 	public static Block charcoal_block;
 	public static Block water_block;
+	public static Block broken_reed;
 	
 	public static void init(){
 		lamp_block = new Blocklamp(Material.glass).setUnlocalizedName("lamp_block");
@@ -58,6 +60,7 @@ public class SimpleAddonsBlocks {
 		lava_block = new Blocklava(Material.redstoneLight).setUnlocalizedName("lava_block");
 		charcoal_block = new Blockcharcoal(Material.rock).setUnlocalizedName("charcoal_block");
 		water_block = new Blockwater(Material.rock).setUnlocalizedName("water_block");
+		broken_reed = new Blockreed().setUnlocalizedName("broken_reed");
 	}
 	public static void register(){
 		GameRegistry.registerBlock(lamp_block, lamp_block.getUnlocalizedName().substring(5));
@@ -80,6 +83,7 @@ public class SimpleAddonsBlocks {
 		GameRegistry.registerBlock(lava_block, lava_block.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(charcoal_block, charcoal_block.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(water_block, water_block.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(broken_reed, broken_reed.getUnlocalizedName().substring(5));
 		GameRegistry.registerFuelHandler(new FuelHandler());
 	}
 	
@@ -104,6 +108,7 @@ public class SimpleAddonsBlocks {
 		registerRender(lava_block);
 		registerRender(charcoal_block);
 		registerRender(water_block);
+		registerRender(broken_reed);
 	}
 	
 	public static void registerRender(Block block){

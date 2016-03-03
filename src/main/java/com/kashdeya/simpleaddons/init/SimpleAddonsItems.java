@@ -9,7 +9,6 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import com.kashdeya.simpleaddons.Reference;
 import com.kashdeya.simpleaddons.SimpleAddons;
 import com.kashdeya.simpleaddons.items.Itemhammer;
-import com.kashdeya.simpleaddons.items.Itemjuicer;
 import com.kashdeya.simpleaddons.items.Itemknife;
 
 public class SimpleAddonsItems {
@@ -21,13 +20,15 @@ public class SimpleAddonsItems {
 	public static Item item_plate;
 	public static Item item_hammer;
 	public static Item item_chain;
+	public static Item item_broken_reed;
 	
 	public static void init(){
 		knife = new Itemknife("knife", 100, knifeMaterial).setUnlocalizedName("knife");
-		item_juicer = new Itemjuicer("item_juicer", 100, knifeMaterial).setUnlocalizedName("item_juicer");
+		item_juicer = new Item().setUnlocalizedName("item_juicer").setCreativeTab(SimpleAddons.items);;
 		item_hammer = new Itemhammer("item_hammer", 100, knifeMaterial).setUnlocalizedName("item_hammer");
 		item_plate = new Item().setUnlocalizedName("item_plate").setCreativeTab(SimpleAddons.items);
 		item_chain = new Item().setUnlocalizedName("item_chain").setCreativeTab(SimpleAddons.items);
+		item_broken_reed = new Item().setUnlocalizedName("item_broken_reed").setCreativeTab(SimpleAddons.items);
 	}
 	
 	public static void register(){
@@ -36,6 +37,7 @@ public class SimpleAddonsItems {
 		GameRegistry.registerItem(item_juicer, item_juicer.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(item_hammer, item_hammer.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(item_plate, item_plate.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(item_broken_reed, item_broken_reed.getUnlocalizedName().substring(5));
 	}
 	
 	public static void registerRenders(){
@@ -44,6 +46,7 @@ public class SimpleAddonsItems {
 		registerRender(item_hammer);
 		registerRender(item_plate);
 		registerRender(item_chain);
+		registerRender(item_broken_reed);
 
 	}
 	

@@ -30,6 +30,7 @@ public class CraftingRecipes {
 	public static boolean chainOff = false;
 	public static boolean charcoalOff = false;
 	public static boolean chestOff = false;
+	public static boolean reedOff = false;
 
 	public static void registerCraftingRecipies() {
 		
@@ -164,6 +165,12 @@ public class CraftingRecipes {
 		}
 		else{
 			GameRegistry.addShapedRecipe(new ItemStack(Blocks.chest, 4), new Object[] {"LLL", "L L", "LLL", 'L', new ItemStack(Blocks.log, 1, OreDictionary.WILDCARD_VALUE)});
+		}
+		
+		if (reedOff){
+		}
+		else{
+			GameRegistry.addShapedRecipe(new ItemStack(Items.reeds), new Object[] {"B", "B", 'B', SimpleAddonsItems.item_broken_reed});
 		}
 		
 		GameRegistry.addShapedRecipe(new ItemStack(SimpleAddonsItems.knife), new Object[] {"  I", " I ", "S ", 'I', Items.iron_ingot, 'S', Items.stick});

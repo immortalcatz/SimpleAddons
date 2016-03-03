@@ -40,6 +40,7 @@ public class ConfigHandler
         CraftingRecipes.hammerOff = config.getBoolean("Hammer", Configuration.CATEGORY_GENERAL, false, "Turns off Hammer Recipes");
         CraftingRecipes.chainOff = config.getBoolean("Chain Armour", Configuration.CATEGORY_GENERAL, false, "Turns off Chain Armour");
         CraftingRecipes.chestOff = config.getBoolean("Chest", Configuration.CATEGORY_GENERAL, false, "Turns off Chest Recipe");
+        CraftingRecipes.reedOff = config.getBoolean("Old Reeds", Configuration.CATEGORY_GENERAL, false, "Turns off Sugarcane Recipe");
         
         
         //Furnace Recipes

@@ -2,19 +2,16 @@ package com.kashdeya.simpleaddons.items;
 
 import java.util.List;
 
-import com.kashdeya.simpleaddons.SimpleAddons;
-import com.kashdeya.simpleaddons.init.SimpleAddonsItems;
-
-import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemSword;
-import net.minecraft.item.Item.ToolMaterial;
+import net.minecraft.item.ItemPickaxe;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class Itemknife extends ItemSword{
+import com.kashdeya.simpleaddons.SimpleAddons;
+
+public class Itemknife extends ItemPickaxe{
 	
 	private float attackDamage;
 
