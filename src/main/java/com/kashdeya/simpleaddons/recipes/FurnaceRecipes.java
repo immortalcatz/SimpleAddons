@@ -1,12 +1,11 @@
 package com.kashdeya.simpleaddons.recipes;
 
-import com.kashdeya.simpleaddons.init.SimpleAddonsFood;
-
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+
+import com.kashdeya.simpleaddons.init.SimpleAddonsFood;
 
 public class FurnaceRecipes {
 	

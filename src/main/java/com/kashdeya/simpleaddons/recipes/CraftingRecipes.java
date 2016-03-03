@@ -1,15 +1,14 @@
 package com.kashdeya.simpleaddons.recipes;
 
-import com.kashdeya.simpleaddons.init.SimpleAddonsBlocks;
-import com.kashdeya.simpleaddons.init.SimpleAddonsFood;
-import com.kashdeya.simpleaddons.init.SimpleAddonsItems;
-
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.oredict.OreDictionary;
+
+import com.kashdeya.simpleaddons.init.SimpleAddonsBlocks;
+import com.kashdeya.simpleaddons.init.SimpleAddonsFood;
+import com.kashdeya.simpleaddons.init.SimpleAddonsItems;
 
 public class CraftingRecipes {
 	
@@ -71,9 +70,9 @@ public class CraftingRecipes {
 		}
 		else{
 			GameRegistry.addShapedRecipe(new ItemStack(SimpleAddonsItems.item_juicer), new Object[] {" S ", "S S", "SSS", 'S', Blocks.stone});
-			GameRegistry.addShapelessRecipe(new ItemStack(SimpleAddonsFood.apple_juice), new Object[] {Items.apple, Items.glass_bottle, new ItemStack(SimpleAddonsItems.item_juicer, 1, OreDictionary.WILDCARD_VALUE)});
-			GameRegistry.addShapelessRecipe(new ItemStack(SimpleAddonsFood.carrot_juice), new Object[] {Items.carrot, Items.glass_bottle, new ItemStack(SimpleAddonsItems.item_juicer, 1, OreDictionary.WILDCARD_VALUE)});
-			GameRegistry.addShapelessRecipe(new ItemStack(SimpleAddonsFood.cactus_juice), new Object[] {Blocks.cactus, Items.glass_bottle, new ItemStack(SimpleAddonsItems.item_juicer, 1, OreDictionary.WILDCARD_VALUE)});
+			GameRegistry.addShapelessRecipe(new ItemStack(SimpleAddonsFood.apple_juice), new Object[] {Items.apple, new ItemStack(SimpleAddonsItems.item_juicer, 1, OreDictionary.WILDCARD_VALUE)});
+			GameRegistry.addShapelessRecipe(new ItemStack(SimpleAddonsFood.carrot_juice), new Object[] {Items.carrot, new ItemStack(SimpleAddonsItems.item_juicer, 1, OreDictionary.WILDCARD_VALUE)});
+			GameRegistry.addShapelessRecipe(new ItemStack(SimpleAddonsFood.cactus_juice), new Object[] {Blocks.cactus, new ItemStack(SimpleAddonsItems.item_juicer, 1, OreDictionary.WILDCARD_VALUE)});
 		}
 		
 		if (baconOff){
