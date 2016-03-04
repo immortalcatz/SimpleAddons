@@ -13,8 +13,11 @@ import net.minecraft.init.Blocks;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.BlockPos;
+import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.World;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.google.common.collect.Maps;
 import com.kashdeya.simpleaddons.SimpleAddons;
@@ -48,6 +51,35 @@ public class Blockwater extends Block{
     {
         float f = 0.125F;
         return new AxisAlignedBB((double)pos.getX(), (double)pos.getY(), (double)pos.getZ(), (double)(pos.getX() + 1), (double)((float)(pos.getY() + 1) - f), (double)(pos.getZ() + 1));
+    }
+	
+	@SideOnly(Side.CLIENT)
+    public void randomDisplayTick(World worldIn, BlockPos pos, IBlockState state, Random rand)
+    {
+        if (this.isFullBlock())
+        {
+        	double d0 = (double)pos.getX();
+            double d1 = (double)pos.getY();
+            double d2 = (double)pos.getZ();
+            
+            if (rand.nextInt(75) == 0)
+            {
+                double d3 = d0 + (double)rand.nextFloat();
+                double d5 = d1;
+                double d7 = d2 + (double)rand.nextFloat();
+                double d8 = d0 + (double)rand.nextFloat();
+                double d4 = d1 + this.maxY;
+                double d6 = d2 + (double)rand.nextFloat();
+                worldIn.spawnParticle(EnumParticleTypes.WATER_BUBBLE, d8, d4, d6, 0.0D, 0.0D, 0.0D, new int[0]);
+                worldIn.playSound(d8, d4, d6, "liquid.water", 0.2F + rand.nextFloat() * 0.2F, 0.9F + rand.nextFloat() * 0.15F, false);
+                worldIn.spawnParticle(EnumParticleTypes.DRIP_WATER, d3, d5, d7, 0.0D, 0.0D, 0.0D, new int[0]);
+            }
+            
+            if (rand.nextInt(200) == 0)
+            {
+                worldIn.playSound(d0, d1, d2, "liquid.lava", 0.2F + rand.nextFloat() * 0.2F, 0.9F + rand.nextFloat() * 0.15F, false);
+            }
+        }
     }
 	
 	public void onFallenUpon(World worldIn, BlockPos pos, Entity entityIn, float fallDistance)

@@ -1,12 +1,9 @@
 package com.kashdeya.simpleaddons.blocks;
 
-import com.kashdeya.simpleaddons.SimpleAddons;
-
 import net.minecraft.block.Block;
-import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
-import net.minecraft.block.state.IBlockState;
-import net.minecraft.creativetab.CreativeTabs;
+
+import com.kashdeya.simpleaddons.SimpleAddons;
 
 public class Blocklamp extends Block{
 

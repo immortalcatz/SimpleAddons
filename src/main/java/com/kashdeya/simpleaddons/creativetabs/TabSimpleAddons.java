@@ -1,10 +1,9 @@
 package com.kashdeya.simpleaddons.creativetabs;
 
-import com.kashdeya.simpleaddons.init.SimpleAddonsItems;
-import com.kashdeya.simpleaddons.items.Itemknife;
-
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
+
+import com.kashdeya.simpleaddons.init.SimpleAddonsItems;
 
 public class TabSimpleAddons extends CreativeTabs {
 

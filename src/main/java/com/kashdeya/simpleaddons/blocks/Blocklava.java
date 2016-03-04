@@ -3,26 +3,24 @@ package com.kashdeya.simpleaddons.blocks;
 import java.util.Map;
 import java.util.Random;
 
-import com.google.common.collect.Maps;
-import com.kashdeya.simpleaddons.SimpleAddons;
-
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockTNT;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.PropertyInteger;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.BlockPos;
-import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.world.Explosion;
-import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
+
+import com.google.common.collect.Maps;
+import com.kashdeya.simpleaddons.SimpleAddons;
 
 public class Blocklava extends Block{
 	
@@ -69,16 +67,32 @@ public class Blocklava extends Block{
         entityIn.setFire(3);
     }
 	
-	protected void triggerMixEffects(World worldIn, BlockPos pos)
+	@SideOnly(Side.CLIENT)
+    public void randomDisplayTick(World worldIn, BlockPos pos, IBlockState state, Random rand)
     {
-        double d0 = (double)pos.getX();
-        double d1 = (double)pos.getY();
-        double d2 = (double)pos.getZ();
-        worldIn.playSoundEffect(d0 + 0.5D, d1 + 0.5D, d2 + 0.5D, "random.fizz", 0.5F, 2.6F + (worldIn.rand.nextFloat() - worldIn.rand.nextFloat()) * 0.8F);
-
-        for (int i = 0; i < 8; ++i)
+        if (this.isFullBlock())
         {
-            worldIn.spawnParticle(EnumParticleTypes.SMOKE_LARGE, d0 + Math.random(), d1 + 1.2D, d2 + Math.random(), 0.0D, 0.0D, 0.0D, new int[0]);
+        	double d0 = (double)pos.getX();
+            double d1 = (double)pos.getY();
+            double d2 = (double)pos.getZ();
+            
+            if (rand.nextInt(75) == 0)
+            {
+                double d3 = d0 + (double)rand.nextFloat();
+                double d5 = d1;
+                double d7 = d2 + (double)rand.nextFloat();
+                double d8 = d0 + (double)rand.nextFloat();
+                double d4 = d1 + this.maxY;
+                double d6 = d2 + (double)rand.nextFloat();
+                worldIn.spawnParticle(EnumParticleTypes.LAVA, d8, d4, d6, 0.0D, 0.0D, 0.0D, new int[0]);
+                worldIn.playSound(d8, d4, d6, "liquid.lavapop", 0.2F + rand.nextFloat() * 0.2F, 0.9F + rand.nextFloat() * 0.15F, false);
+                worldIn.spawnParticle(EnumParticleTypes.DRIP_LAVA, d3, d5, d7, 0.0D, 0.0D, 0.0D, new int[0]);
+            }
+            
+            if (rand.nextInt(200) == 0)
+            {
+                worldIn.playSound(d0, d1, d2, "liquid.lava", 0.2F + rand.nextFloat() * 0.2F, 0.9F + rand.nextFloat() * 0.15F, false);
+            }
         }
     }
 

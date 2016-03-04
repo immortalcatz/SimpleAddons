@@ -30,7 +30,8 @@ public class CraftingRecipes {
 	public static boolean chainOff = false;
 	public static boolean charcoalOff = false;
 	public static boolean chestOff = false;
-	public static boolean reedOff = false;
+	public static boolean reedOff = true;
+	public static boolean scrap1Off = false;
 
 	public static void registerCraftingRecipies() {
 		
@@ -142,7 +143,6 @@ public class CraftingRecipes {
 		}
 		else{
 			GameRegistry.addShapedRecipe(new ItemStack(SimpleAddonsItems.item_hammer), new Object[] {"III", "ITI", " S ", 'I', Items.iron_ingot, 'S', Items.stick, 'T', Items.string});
-			GameRegistry.addShapelessRecipe(new ItemStack(SimpleAddonsItems.item_chain, 2), new Object[] {new ItemStack(SimpleAddonsItems.item_hammer, 1, OreDictionary.WILDCARD_VALUE), Items.iron_ingot});
 		}
 		
 		if (chainOff){
@@ -152,6 +152,7 @@ public class CraftingRecipes {
 			GameRegistry.addShapedRecipe(new ItemStack(Items.chainmail_chestplate), new Object[] {"C C", "CCC", "CCC", 'C', new ItemStack(SimpleAddonsItems.item_chain)});
 			GameRegistry.addShapedRecipe(new ItemStack(Items.chainmail_leggings), new Object[] {"CCC", "C C", "C C", 'C', new ItemStack(SimpleAddonsItems.item_chain)});
 			GameRegistry.addShapedRecipe(new ItemStack(Items.chainmail_boots), new Object[] {"C C", "C C", 'C', new ItemStack(SimpleAddonsItems.item_chain)});
+			GameRegistry.addShapelessRecipe(new ItemStack(SimpleAddonsItems.item_chain, 2), new Object[] {new ItemStack(SimpleAddonsItems.item_hammer, 1, OreDictionary.WILDCARD_VALUE), Items.iron_ingot});
 		}
 		
 		if (charcoalOff){
@@ -171,6 +172,13 @@ public class CraftingRecipes {
 		}
 		else{
 			GameRegistry.addShapedRecipe(new ItemStack(Items.reeds), new Object[] {"B", "B", 'B', SimpleAddonsItems.item_broken_reed});
+		}
+		
+		if (scrap1Off){
+		}
+		else{
+			GameRegistry.addShapelessRecipe(new ItemStack(SimpleAddonsItems.gold_scrap, 4), new Object[] {new ItemStack(SimpleAddonsItems.item_hammer, 1, OreDictionary.WILDCARD_VALUE), Items.golden_horse_armor});
+			GameRegistry.addShapelessRecipe(new ItemStack(SimpleAddonsItems.iron_scrap, 4), new Object[] {new ItemStack(SimpleAddonsItems.item_hammer, 1, OreDictionary.WILDCARD_VALUE), Items.iron_horse_armor});
 		}
 		
 		GameRegistry.addShapedRecipe(new ItemStack(SimpleAddonsItems.knife), new Object[] {"  I", " I ", "S ", 'I', Items.iron_ingot, 'S', Items.stick});
