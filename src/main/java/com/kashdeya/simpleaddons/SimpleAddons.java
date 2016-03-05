@@ -16,6 +16,7 @@ import com.kashdeya.simpleaddons.handlers.ConfigHandler;
 import com.kashdeya.simpleaddons.init.SimpleAddonsBlocks;
 import com.kashdeya.simpleaddons.init.SimpleAddonsFood;
 import com.kashdeya.simpleaddons.init.SimpleAddonsItems;
+import com.kashdeya.simpleaddons.init.SimpleAddonsTools;
 import com.kashdeya.simpleaddons.proxy.CommonProxy;
 import com.kashdeya.simpleaddons.recipes.CraftingRecipes;
 import com.kashdeya.simpleaddons.recipes.FurnaceRecipes;
@@ -39,6 +40,7 @@ public class SimpleAddons {
 		SimpleAddonsItems.register();
 		SimpleAddonsFood.init();
 		SimpleAddonsFood.register();
+		SimpleAddonsTools.init();
 		ConfigHandler.config = new Configuration(event.getSuggestedConfigurationFile(), true);
 		ConfigHandler.initConfigs();
 	}

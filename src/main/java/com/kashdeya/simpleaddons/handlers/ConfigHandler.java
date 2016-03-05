@@ -2,6 +2,7 @@ package com.kashdeya.simpleaddons.handlers;
 
 import net.minecraftforge.common.config.Configuration;
 
+import com.kashdeya.simpleaddons.init.SimpleAddonsTools;
 import com.kashdeya.simpleaddons.recipes.CraftingRecipes;
 import com.kashdeya.simpleaddons.recipes.FurnaceRecipes;
 
@@ -48,6 +49,7 @@ public class ConfigHandler
         CraftingRecipes.iceOff = config.getBoolean("Ice",  category+ " Vanilla Recipes", true, "Enable Ice?");
         CraftingRecipes.packedOff = config.getBoolean("Packed Ice",  category+ " Vanilla Recipes", true, "Enable Packed Ice?");
         CraftingRecipes.slabOff = config.getBoolean("Slab",  category+ " Vanilla Recipes", false, "Enable Cobble Slabs to Blocks?");        
+        SimpleAddonsTools.removeOff = config.getBoolean("Stone Tools", category, true, "Enable real stone tools?");
         
         //Furnace Recipes
         config.addCustomCategoryComment(category + " Furnace Recipes", "TRUE = Yes and FALSE = No");
