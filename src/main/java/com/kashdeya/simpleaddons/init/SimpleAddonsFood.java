@@ -36,17 +36,17 @@ public class SimpleAddonsFood extends ItemFood{
 	}
 
 	public static void init(){
-		bacon = new SimpleAddonsFood(1, 0.1F, true).setUnlocalizedName("bacon").setCreativeTab(SimpleAddons.items);
-		cooked_bacon = new SimpleAddonsFood(3, 0.3F, true).setUnlocalizedName("cooked_bacon").setCreativeTab(SimpleAddons.items);
-		monster_jerky = new SimpleAddonsFood(4, 0.5F, true).setUnlocalizedName("monster_jerky").setCreativeTab(SimpleAddons.items);
-		toast = new SimpleAddonsFood(7, 1.2F, true).setUnlocalizedName("toast").setCreativeTab(SimpleAddons.items);
-		fried_egg = new SimpleAddonsFood(5, 06F, true).setUnlocalizedName("fried_egg").setCreativeTab(SimpleAddons.items);
-		cooked_mushroom_brown = new SimpleAddonsFood(2, 03F, false).setUnlocalizedName("cooked_mushroom_brown").setCreativeTab(SimpleAddons.items);
-		cooked_mushroom_red = new SimpleAddonsFood(2, 03F, false).setUnlocalizedName("cooked_mushroom_red").setCreativeTab(SimpleAddons.items);
-		apple_juice = new SimpleAddonsFood(6, 0.6F, false).setUnlocalizedName("apple_juice").setCreativeTab(SimpleAddons.items);
-		carrot_juice = new SimpleAddonsFood(4, 0.6F, false).setUnlocalizedName("carrot_juice").setCreativeTab(SimpleAddons.items);
-		cactus_juice = new SimpleAddonsFood(4, 0.6F, false).setUnlocalizedName("cactus_juice").setCreativeTab(SimpleAddons.items);
-		bacon_eggs = new SimpleAddonsFood(6, 0.7F, false).setUnlocalizedName("bacon_eggs").setCreativeTab(SimpleAddons.items);
+		bacon = new SimpleAddonsFood(1, 0.1F, true).setUnlocalizedName("bacon").setCreativeTab(SimpleAddons.tabFood);
+		cooked_bacon = new SimpleAddonsFood(3, 0.3F, true).setUnlocalizedName("cooked_bacon").setCreativeTab(SimpleAddons.tabFood);
+		monster_jerky = new SimpleAddonsFood(4, 0.5F, true).setUnlocalizedName("monster_jerky").setCreativeTab(SimpleAddons.tabFood);
+		toast = new SimpleAddonsFood(7, 1.2F, true).setUnlocalizedName("toast").setCreativeTab(SimpleAddons.tabFood);
+		fried_egg = new SimpleAddonsFood(5, 06F, true).setUnlocalizedName("fried_egg").setCreativeTab(SimpleAddons.tabFood);
+		cooked_mushroom_brown = new SimpleAddonsFood(2, 03F, false).setUnlocalizedName("cooked_mushroom_brown").setCreativeTab(SimpleAddons.tabFood);
+		cooked_mushroom_red = new SimpleAddonsFood(2, 03F, false).setUnlocalizedName("cooked_mushroom_red").setCreativeTab(SimpleAddons.tabFood);
+		apple_juice = new SimpleAddonsFood(6, 0.6F, false).setUnlocalizedName("apple_juice").setCreativeTab(SimpleAddons.tabFood);
+		carrot_juice = new SimpleAddonsFood(4, 0.6F, false).setUnlocalizedName("carrot_juice").setCreativeTab(SimpleAddons.tabFood);
+		cactus_juice = new SimpleAddonsFood(4, 0.6F, false).setUnlocalizedName("cactus_juice").setCreativeTab(SimpleAddons.tabFood);
+		bacon_eggs = new SimpleAddonsFood(6, 0.7F, false).setUnlocalizedName("bacon_eggs").setCreativeTab(SimpleAddons.tabFood);
 	}
 	
 	public static void register(){

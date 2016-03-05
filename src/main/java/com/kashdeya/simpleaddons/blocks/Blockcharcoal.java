@@ -13,7 +13,7 @@ public class Blockcharcoal extends Block{
 		super(material);
 		this.setHardness(2.0F);
 		this.setResistance(4.0F);
-		this.setCreativeTab(SimpleAddons.items);
+		this.setCreativeTab(SimpleAddons.tabBlock);
 	}
 	
 	public static void init() {

@@ -9,12 +9,13 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
-import com.kashdeya.simpleaddons.creativetabs.TabSimpleAddons;
+import com.kashdeya.simpleaddons.creativetabs.TabSimpleAddonsBlocks;
+import com.kashdeya.simpleaddons.creativetabs.TabSimpleAddonsFood;
+import com.kashdeya.simpleaddons.creativetabs.TabSimpleAddonsItems;
 import com.kashdeya.simpleaddons.handlers.ConfigHandler;
 import com.kashdeya.simpleaddons.init.SimpleAddonsBlocks;
 import com.kashdeya.simpleaddons.init.SimpleAddonsFood;
 import com.kashdeya.simpleaddons.init.SimpleAddonsItems;
-import com.kashdeya.simpleaddons.init.SimpleAddonsTools;
 import com.kashdeya.simpleaddons.proxy.CommonProxy;
 import com.kashdeya.simpleaddons.recipes.CraftingRecipes;
 import com.kashdeya.simpleaddons.recipes.FurnaceRecipes;
@@ -26,7 +27,9 @@ public class SimpleAddons {
 	@SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.SERVER_PROXY_CLASS)
 	public static CommonProxy proxy;
 	
-	public static CreativeTabs items = new TabSimpleAddons("SimpleAddons");
+	public static final CreativeTabs tabBlock = new TabSimpleAddonsBlocks("SimpleAddonsBlocks");
+	public static final CreativeTabs tabItems = new TabSimpleAddonsItems("SimpleAddonsItems");
+	public static final CreativeTabs tabFood = new TabSimpleAddonsFood("SimpleAddonsFood");
 	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event){
@@ -36,7 +39,6 @@ public class SimpleAddons {
 		SimpleAddonsItems.register();
 		SimpleAddonsFood.init();
 		SimpleAddonsFood.register();
-		SimpleAddonsTools.init();
 		ConfigHandler.config = new Configuration(event.getSuggestedConfigurationFile(), true);
 		ConfigHandler.initConfigs();
 	}

@@ -5,9 +5,9 @@ import net.minecraft.item.Item;
 
 import com.kashdeya.simpleaddons.init.SimpleAddonsItems;
 
-public class TabSimpleAddons extends CreativeTabs {
+public class TabSimpleAddonsItems extends CreativeTabs {
 
-	public TabSimpleAddons(String label) {
+	public TabSimpleAddonsItems(String label) {
 		super(label);
 	}
 

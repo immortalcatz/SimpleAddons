@@ -22,7 +22,7 @@ public class Itemhammer extends ItemSword{
 		super.setMaxStackSize(1);
 		super.setContainerItem(this);
 		super.showDurabilityBar(new ItemStack(this));
-		this.setCreativeTab(SimpleAddons.items);
+		this.setCreativeTab(SimpleAddons.tabItems);
 		this.attackDamage = 3.0F + material.getDamageVsEntity();
 	}
 	

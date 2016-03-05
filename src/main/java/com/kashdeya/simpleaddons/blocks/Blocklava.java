@@ -33,7 +33,7 @@ public class Blocklava extends Block{
         this.setHardness(0.5F);
         this.setLightLevel(1.0F);
         this.setStepSound(soundTypeStone);
-        this.setCreativeTab(SimpleAddons.items);
+        this.setCreativeTab(SimpleAddons.tabBlock);
     }
 	
 	public void harvestBlock(World worldIn, EntityPlayer player, BlockPos pos, IBlockState state, TileEntity te)

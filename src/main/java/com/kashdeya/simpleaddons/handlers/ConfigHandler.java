@@ -2,7 +2,6 @@ package com.kashdeya.simpleaddons.handlers;
 
 import net.minecraftforge.common.config.Configuration;
 
-import com.kashdeya.simpleaddons.init.SimpleAddonsTools;
 import com.kashdeya.simpleaddons.recipes.CraftingRecipes;
 import com.kashdeya.simpleaddons.recipes.FurnaceRecipes;
 
@@ -38,7 +37,6 @@ public class ConfigHandler
         CraftingRecipes.scrap1Off = config.getBoolean("Scrap Metals",  category, true, "Enable uncrafting of horse armour?");
         CraftingRecipes.charcoalOff = config.getBoolean("Charcoal Block", category, true, "Enable Charcoal Block?");
         CraftingRecipes.leatherOff = config.getBoolean("Leather",  category, true, "Enable rotten flesh to leather?");
-        SimpleAddonsTools.removeOff = config.getBoolean("Stone Tools", category, true, "Enable real stone tools?");
 
 		//Crafting Recipes
         config.addCustomCategoryComment(category + " Vanilla Recipes", "TRUE = Yes and FALSE = No");

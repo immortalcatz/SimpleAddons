@@ -22,7 +22,7 @@ public class Itemknife extends ItemPickaxe{
 		super.setMaxStackSize(1);
 		super.setContainerItem(this);
 		super.showDurabilityBar(new ItemStack(this));
-		this.setCreativeTab(SimpleAddons.items);
+		this.setCreativeTab(SimpleAddons.tabItems);
 		this.attackDamage = 2.0F;
 		
 	}

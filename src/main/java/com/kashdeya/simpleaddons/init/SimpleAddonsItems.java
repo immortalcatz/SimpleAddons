@@ -26,13 +26,13 @@ public class SimpleAddonsItems {
 	
 	public static void init(){
 		knife = new Itemknife("knife", 100, knifeMaterial).setUnlocalizedName("knife");
-		item_juicer = new Item().setUnlocalizedName("item_juicer").setCreativeTab(SimpleAddons.items);;
+		item_juicer = new Item().setUnlocalizedName("item_juicer").setCreativeTab(SimpleAddons.tabItems);;
 		item_hammer = new Itemhammer("item_hammer", 100, knifeMaterial).setUnlocalizedName("item_hammer");
-		item_plate = new Item().setUnlocalizedName("item_plate").setCreativeTab(SimpleAddons.items);
-		item_chain = new Item().setUnlocalizedName("item_chain").setCreativeTab(SimpleAddons.items);
-		item_broken_reed = new Item().setUnlocalizedName("item_broken_reed").setCreativeTab(SimpleAddons.items);
-		iron_scrap = new Item().setUnlocalizedName("iron_scrap").setCreativeTab(SimpleAddons.items);
-		gold_scrap = new Item().setUnlocalizedName("gold_scrap").setCreativeTab(SimpleAddons.items);
+		item_plate = new Item().setUnlocalizedName("item_plate").setCreativeTab(SimpleAddons.tabItems);
+		item_chain = new Item().setUnlocalizedName("item_chain").setCreativeTab(SimpleAddons.tabItems);
+		item_broken_reed = new Item().setUnlocalizedName("item_broken_reed").setCreativeTab(SimpleAddons.tabItems);
+		iron_scrap = new Item().setUnlocalizedName("iron_scrap").setCreativeTab(SimpleAddons.tabItems);
+		gold_scrap = new Item().setUnlocalizedName("gold_scrap").setCreativeTab(SimpleAddons.tabItems);
 	}
 	
 	public static void register(){

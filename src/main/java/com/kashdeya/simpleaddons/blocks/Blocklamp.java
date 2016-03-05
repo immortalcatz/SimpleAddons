@@ -13,7 +13,7 @@ public class Blocklamp extends Block{
 		this.setLightLevel(1.0F);
 		this.setLightOpacity(1);
 		this.setStepSound(soundTypeGlass);
-		this.setCreativeTab(SimpleAddons.items);
+		this.setCreativeTab(SimpleAddons.tabBlock);
 	}
 
 }

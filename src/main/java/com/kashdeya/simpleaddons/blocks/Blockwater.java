@@ -31,7 +31,7 @@ public class Blockwater extends Block{
         super(Material.redstoneLight);
         this.setHardness(0.5F);
         this.setStepSound(soundTypeStone);
-        this.setCreativeTab(SimpleAddons.items);
+        this.setCreativeTab(SimpleAddons.tabBlock);
     }
 	
 	public void harvestBlock(World worldIn, EntityPlayer player, BlockPos pos, IBlockState state, TileEntity te)

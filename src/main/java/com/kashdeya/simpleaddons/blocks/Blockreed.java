@@ -25,7 +25,7 @@ public class Blockreed extends Block implements net.minecraftforge.common.IPlant
 		super(Material.plants);
         float f = 0.375F;
         this.setBlockBounds(0.5F - f, 0.0F, 0.5F - f, 0.5F + f, 1.0F, 0.5F + f);
-        this.setCreativeTab(SimpleAddons.items);
+        this.setCreativeTab(SimpleAddons.tabBlock);
     }
     
 	boolean canPlaceBlockOn(Block ground)

@@ -38,4 +38,6 @@ item.item_plate.name=Plate
 item.bacon_eggs.name=Bacon and Eggs
 item.item_hammer.name=Hammer
 item.item_chain.name=Chain Plate
-itemGroup.SimpleAddons=Simple Addons
+itemGroup.SimpleAddonsBlocks=Simple Addons Blocks
+itemGroup.SimpleAddonsItems=Simple Addons Items
+itemGroup.SimpleAddonsFood=Simple Addons Food
