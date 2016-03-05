@@ -2,6 +2,7 @@ package com.kashdeya.simpleaddons.handlers;
 
 import net.minecraftforge.common.config.Configuration;
 
+import com.kashdeya.simpleaddons.init.SimpleAddonsTools;
 import com.kashdeya.simpleaddons.recipes.CraftingRecipes;
 import com.kashdeya.simpleaddons.recipes.FurnaceRecipes;
 
@@ -10,10 +11,10 @@ public class ConfigHandler
 	public static Configuration config;
 	public static int CharcoalBlockBurnTime = 1600;
 	public static int PaperBurnTime = 50;
-	public static int BowlBurnTime = 0;
-	public static int LadderBurnTime = 0;
-	public static int WoodenPressurePlateBurnTime = 0;
-	public static int SignBurnTime = 0;
+	public static int BowlBurnTime = 100;
+	public static int LadderBurnTime = 100;
+	public static int WoodenPressurePlateBurnTime = 100;
+	public static int SignBurnTime = 100;
 
 	public static void initConfigs()
 	{
@@ -24,41 +25,41 @@ public class ConfigHandler
 		String category;
 		
 		category = "Simple Addons";
-		config.addCustomCategoryComment(category, "TRUE = Disabled and FALSE = Active");
-		
-		CraftingRecipes.lampOff = config.getBoolean("Lamps", category, false, "Disable Lamp Block?");
-        CraftingRecipes.clampOff = config.getBoolean("Color Lamps",  category, false, "Disable Color Lamp Blocks?");
-        CraftingRecipes.juicesOff = config.getBoolean("Juices",  category, false, "Disable juicer Recipes?");
-        CraftingRecipes.baconOff = config.getBoolean("Bacon",  category, false, "Disable bacon?");
-        CraftingRecipes.bneOff = config.getBoolean("Bacon & Eggs",  category, false, "Disable bacon and eggs?");
-        CraftingRecipes.hammerOff = config.getBoolean("Hammer",  category, false, "Disable Hammer Recipes?");
-        CraftingRecipes.chainOff = config.getBoolean("Chain Armour",  category, false, "Disable Chain Armour?");
-        CraftingRecipes.chestOff = config.getBoolean("Chest",  category, false, "Disable Chest Recipe?");
-        CraftingRecipes.reedOff = config.getBoolean("Old Reeds",  category, false, "Disable Sugarcane Recipe?");
-        CraftingRecipes.scrap1Off = config.getBoolean("Scrap Metals",  category, false, "Disable uncrafting of horse armour?");
-        CraftingRecipes.charcoalOff = config.getBoolean("Charcoal Block", category, false, "Disable Charcoal Block?");
-        CraftingRecipes.leatherOff = config.getBoolean("Leather",  category, false, "Disable rotten flesh to leather?");
+		config.addCustomCategoryComment(category, "TRUE = Yes and FALSE = No");
+		CraftingRecipes.lampOff = config.getBoolean("Lamps", category, true, "Enable Lamp Block?");
+        CraftingRecipes.clampOff = config.getBoolean("Color Lamps",  category, true, "Enable Color Lamp Blocks?");
+        CraftingRecipes.juicesOff = config.getBoolean("Juices",  category, true, "Enable juicer Recipes?");
+        CraftingRecipes.baconOff = config.getBoolean("Bacon",  category, true, "Enable bacon?");
+        CraftingRecipes.bneOff = config.getBoolean("Bacon & Eggs",  category, true, "Enable bacon and eggs?");
+        CraftingRecipes.hammerOff = config.getBoolean("Hammer",  category, true, "Enable Hammer Recipes?");
+        CraftingRecipes.chainOff = config.getBoolean("Chain Armour",  category, true, "Enable Chain Armour?");
+        CraftingRecipes.chestOff = config.getBoolean("Chest",  category, true, "Enable Chest Recipe?");
+        CraftingRecipes.reedOff = config.getBoolean("Old Reeds",  category, true, "Enable Sugarcane Recipe?");
+        CraftingRecipes.scrap1Off = config.getBoolean("Scrap Metals",  category, true, "Enable uncrafting of horse armour?");
+        CraftingRecipes.charcoalOff = config.getBoolean("Charcoal Block", category, true, "Enable Charcoal Block?");
+        CraftingRecipes.leatherOff = config.getBoolean("Leather",  category, true, "Enable rotten flesh to leather?");
+        SimpleAddonsTools.removeOff = config.getBoolean("Stone Tools", category, true, "Enable real stone tools?");
 
 		//Crafting Recipes
-        config.addCustomCategoryComment(category + " Vanilla Recipes", "TRUE = Disabled and FALSE = Active");
-        CraftingRecipes.nametagOff = config.getBoolean("Name Tag",  category+ " Vanilla Recipes", false, "Disable name tag recipe?");
-        CraftingRecipes.saddleOff = config.getBoolean("Saddle",  category+ " Vanilla Recipes", false, "Disable Saddle?");
-        CraftingRecipes.horseOff = config.getBoolean("Horse Armour",  category+ " Vanilla Recipes", false, "Disable Horse Armour?");
-        CraftingRecipes.spongeOff = config.getBoolean("Sponge",  category+ " Vanilla Recipes", false, "Disable Sponge?");
-        CraftingRecipes.cobwebOff = config.getBoolean("Cobweb",  category+ " Vanilla Recipes", false, "Disable Cobweb?");
-        CraftingRecipes.iceOff = config.getBoolean("Ice",  category+ " Vanilla Recipes", false, "Disable Ice?");
-        CraftingRecipes.packedOff = config.getBoolean("Packed Ice",  category+ " Vanilla Recipes", false, "Disable Packed Ice?");
-        CraftingRecipes.slabOff = config.getBoolean("Slab",  category+ " Vanilla Recipes", true, "Disable Cobble Slabs to Blocks?");        
+        config.addCustomCategoryComment(category + " Vanilla Recipes", "TRUE = Yes and FALSE = No");
+        CraftingRecipes.nametagOff = config.getBoolean("Name Tag",  category+ " Vanilla Recipes", true, "Enable name tag recipe?");
+        CraftingRecipes.saddleOff = config.getBoolean("Saddle",  category+ " Vanilla Recipes", true, "Enable Saddle?");
+        CraftingRecipes.horseOff = config.getBoolean("Horse Armour",  category+ " Vanilla Recipes", true, "Enable Horse Armour?");
+        CraftingRecipes.spongeOff = config.getBoolean("Sponge",  category+ " Vanilla Recipes", true, "Enable Sponge?");
+        CraftingRecipes.cobwebOff = config.getBoolean("Cobweb",  category+ " Vanilla Recipes", true, "Enable Cobweb?");
+        CraftingRecipes.iceOff = config.getBoolean("Ice",  category+ " Vanilla Recipes", true, "Enable Ice?");
+        CraftingRecipes.packedOff = config.getBoolean("Packed Ice",  category+ " Vanilla Recipes", true, "Enable Packed Ice?");
+        CraftingRecipes.slabOff = config.getBoolean("Slab",  category+ " Vanilla Recipes", false, "Enable Cobble Slabs to Blocks?");        
         
         //Furnace Recipes
-        config.addCustomCategoryComment(category + " Furnace Recipes", "TRUE = Disabled and FALSE = Active");
-        FurnaceRecipes.cookedbaconOff = config.getBoolean("Cooked Bacon", category+ " Furnace Recipes", false, "Disable cooked bacon?");
-        FurnaceRecipes.toastOff = config.getBoolean("Toast", category+ " Furnace Recipes", false, "Disable toast?");
-        FurnaceRecipes.fleshOff = config.getBoolean("Monster Jerky", category+ " Furnace Recipes", false, "Disable monster jerky?");
-        FurnaceRecipes.eggOff = config.getBoolean("Fried Egg", category+ " Furnace Recipes", false, "Disable fried egg?");
-        FurnaceRecipes.brownOff = config.getBoolean("Cooked Brown Mushroom", category+ " Furnace Recipes", false, "Disable cooked brown mushroom?");
-        FurnaceRecipes.redOff = config.getBoolean("Cooked Red Mushroom", category+ " Furnace Recipes", false, "Disable cooked red mushroom?");
-        FurnaceRecipes.scrapOff = config.getBoolean("Scrap Metal", category+ " Furnace Recipes", false, "Disable furnace recipe for scrap metal to ingots?");
+        config.addCustomCategoryComment(category + " Furnace Recipes", "TRUE = Yes and FALSE = No");
+        FurnaceRecipes.cookedbaconOff = config.getBoolean("Cooked Bacon", category+ " Furnace Recipes", true, "Enable cooked bacon?");
+        FurnaceRecipes.toastOff = config.getBoolean("Toast", category+ " Furnace Recipes", true, "Enable toast?");
+        FurnaceRecipes.fleshOff = config.getBoolean("Monster Jerky", category+ " Furnace Recipes", true, "Enable monster jerky?");
+        FurnaceRecipes.eggOff = config.getBoolean("Fried Egg", category+ " Furnace Recipes", true, "Enable fried egg?");
+        FurnaceRecipes.brownOff = config.getBoolean("Cooked Brown Mushroom", category+ " Furnace Recipes", true, "Enable cooked brown mushroom?");
+        FurnaceRecipes.redOff = config.getBoolean("Cooked Red Mushroom", category+ " Furnace Recipes", true, "Enable cooked red mushroom?");
+        FurnaceRecipes.scrapOff = config.getBoolean("Scrap Metal", category+ " Furnace Recipes", true, "Enable furnace recipe for scrap metal to ingots?");
         
         //Fuel
         config.addCustomCategoryComment(category + " Furnace Fuels", "Furnace Fuels use 0 to DISABLE and anything above to activate");

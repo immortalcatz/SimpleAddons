@@ -21,6 +21,8 @@ public class SimpleAddonsItems {
 	public static Item item_hammer;
 	public static Item item_chain;
 	public static Item item_broken_reed;
+	public static Item iron_scrap;
+	public static Item gold_scrap;
 	
 	public static void init(){
 		knife = new Itemknife("knife", 100, knifeMaterial).setUnlocalizedName("knife");
@@ -29,6 +31,8 @@ public class SimpleAddonsItems {
 		item_plate = new Item().setUnlocalizedName("item_plate").setCreativeTab(SimpleAddons.items);
 		item_chain = new Item().setUnlocalizedName("item_chain").setCreativeTab(SimpleAddons.items);
 		item_broken_reed = new Item().setUnlocalizedName("item_broken_reed").setCreativeTab(SimpleAddons.items);
+		iron_scrap = new Item().setUnlocalizedName("iron_scrap").setCreativeTab(SimpleAddons.items);
+		gold_scrap = new Item().setUnlocalizedName("gold_scrap").setCreativeTab(SimpleAddons.items);
 	}
 	
 	public static void register(){
@@ -38,6 +42,8 @@ public class SimpleAddonsItems {
 		GameRegistry.registerItem(item_hammer, item_hammer.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(item_plate, item_plate.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(item_broken_reed, item_broken_reed.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(iron_scrap, iron_scrap.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(gold_scrap, gold_scrap.getUnlocalizedName().substring(5));
 	}
 	
 	public static void registerRenders(){
@@ -47,7 +53,8 @@ public class SimpleAddonsItems {
 		registerRender(item_plate);
 		registerRender(item_chain);
 		registerRender(item_broken_reed);
-
+		registerRender(iron_scrap);
+		registerRender(gold_scrap);
 	}
 	
 	public static void registerRender(Item item){
