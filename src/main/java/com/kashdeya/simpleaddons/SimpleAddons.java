@@ -12,6 +12,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import com.kashdeya.simpleaddons.creativetabs.TabSimpleAddonsBlocks;
 import com.kashdeya.simpleaddons.creativetabs.TabSimpleAddonsFood;
 import com.kashdeya.simpleaddons.creativetabs.TabSimpleAddonsItems;
+import com.kashdeya.simpleaddons.creativetabs.TabSimpleAddonsTools;
 import com.kashdeya.simpleaddons.handlers.ConfigHandler;
 import com.kashdeya.simpleaddons.init.SimpleAddonsBlocks;
 import com.kashdeya.simpleaddons.init.SimpleAddonsFood;
@@ -31,6 +32,7 @@ public class SimpleAddons {
 	public static final CreativeTabs tabBlock = new TabSimpleAddonsBlocks("SimpleAddonsBlocks");
 	public static final CreativeTabs tabItems = new TabSimpleAddonsItems("SimpleAddonsItems");
 	public static final CreativeTabs tabFood = new TabSimpleAddonsFood("SimpleAddonsFood");
+	public static final CreativeTabs tabTools = new TabSimpleAddonsTools("SimpleAddonsTools");
 	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event){
@@ -41,6 +43,7 @@ public class SimpleAddons {
 		SimpleAddonsFood.init();
 		SimpleAddonsFood.register();
 		SimpleAddonsTools.init();
+		SimpleAddonsTools.register();
 		ConfigHandler.config = new Configuration(event.getSuggestedConfigurationFile(), true);
 		ConfigHandler.initConfigs();
 	}

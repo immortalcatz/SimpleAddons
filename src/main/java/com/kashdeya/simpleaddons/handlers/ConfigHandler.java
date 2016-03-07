@@ -38,6 +38,7 @@ public class ConfigHandler
         CraftingRecipes.scrap1Off = config.getBoolean("Scrap Metals",  category, true, "Enable uncrafting of horse armour?");
         CraftingRecipes.charcoalOff = config.getBoolean("Charcoal Block", category, true, "Enable Charcoal Block?");
         CraftingRecipes.leatherOff = config.getBoolean("Leather",  category, true, "Enable rotten flesh to leather?");
+        CraftingRecipes.bucketOff = config.getBoolean("Wooden Bucket",  category, true, "Enable Wooden Bucket?");
 
 		//Crafting Recipes
         config.addCustomCategoryComment(category + " Vanilla Recipes", "TRUE = Yes and FALSE = No");
@@ -49,7 +50,8 @@ public class ConfigHandler
         CraftingRecipes.iceOff = config.getBoolean("Ice",  category+ " Vanilla Recipes", true, "Enable Ice?");
         CraftingRecipes.packedOff = config.getBoolean("Packed Ice",  category+ " Vanilla Recipes", true, "Enable Packed Ice?");
         CraftingRecipes.slabOff = config.getBoolean("Slab",  category+ " Vanilla Recipes", false, "Enable Cobble Slabs to Blocks?");        
-        SimpleAddonsTools.removeOff = config.getBoolean("Stone Tools", category, true, "Enable real stone tools?");
+        SimpleAddonsTools.removeOff = config.getBoolean("Stone Tools", category, true, "Remove Vanilla stone tools?");
+        CraftingRecipes.replaceOff = config.getBoolean("Stone Tools", category, true, "Enable real stone tools?");
         
         //Furnace Recipes
         config.addCustomCategoryComment(category + " Furnace Recipes", "TRUE = Yes and FALSE = No");
@@ -69,6 +71,12 @@ public class ConfigHandler
         LadderBurnTime = config.getInt("Ladder Burn Time", category+ " Furnace Fuels", 0, 0, 100, "The burn time for Ladders");
         WoodenPressurePlateBurnTime = config.getInt("Pressure Plate Burn Time", category+ " Furnace Fuels", 0, 0, 100, "The burn time for Wooden Pressure Plates");
         SignBurnTime = config.getInt("Sign Burn Time", category+ " Furnace Fuels", 0, 0, 100, "The burn time for Signs");
+        
+        //Tools & Weapons
+        config.addCustomCategoryComment(category + " Tools and Weapons", "TRUE = Yes and FALSE = No");
+        CraftingRecipes.graniteOff = config.getBoolean("Granite Tools and Weapons", category + " Tools and Weapons", true, "Enable Granite Tools & Weapons?");
+        CraftingRecipes.andesiteOff = config.getBoolean("Andesite Tools and Weapons", category + " Tools and Weapons", true, "Enable Andesite Tools & Weapons?");
+        CraftingRecipes.dioriteOff = config.getBoolean("Diorite Tools and Weapons", category + " Tools and Weapons", true, "Enable Diorite Tools & Weapons?");
 
         config.save();
 

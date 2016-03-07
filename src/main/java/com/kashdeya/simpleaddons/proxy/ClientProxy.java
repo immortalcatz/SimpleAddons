@@ -3,6 +3,7 @@ package com.kashdeya.simpleaddons.proxy;
 import com.kashdeya.simpleaddons.init.SimpleAddonsBlocks;
 import com.kashdeya.simpleaddons.init.SimpleAddonsFood;
 import com.kashdeya.simpleaddons.init.SimpleAddonsItems;
+import com.kashdeya.simpleaddons.init.SimpleAddonsTools;
 
 public class ClientProxy extends CommonProxy{
 	
@@ -11,6 +12,7 @@ public class ClientProxy extends CommonProxy{
 		SimpleAddonsBlocks.registerRenders();
 		SimpleAddonsItems.registerRenders();
 		SimpleAddonsFood.registerRenders();
+		SimpleAddonsTools.registerRenders();
 	}
 
 }

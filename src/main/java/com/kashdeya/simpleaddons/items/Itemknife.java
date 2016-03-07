@@ -4,14 +4,14 @@ import java.util.List;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemPickaxe;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.ItemSword;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.kashdeya.simpleaddons.SimpleAddons;
 
-public class Itemknife extends ItemPickaxe{
+public class Itemknife extends ItemSword{
 	
 	private float attackDamage;
 

@@ -5,10 +5,12 @@ import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.oredict.OreDictionary;
+import net.minecraftforge.oredict.ShapedOreRecipe;
 
 import com.kashdeya.simpleaddons.init.SimpleAddonsBlocks;
 import com.kashdeya.simpleaddons.init.SimpleAddonsFood;
 import com.kashdeya.simpleaddons.init.SimpleAddonsItems;
+import com.kashdeya.simpleaddons.init.SimpleAddonsTools;
 
 public class CraftingRecipes {
 	
@@ -32,11 +34,50 @@ public class CraftingRecipes {
 	public static boolean chestOff = false;
 	public static boolean reedOff = false;
 	public static boolean scrap1Off = false;
+	public static boolean replaceOff = false;
+	public static boolean graniteOff = false;
+	public static boolean dioriteOff = false;
+	public static boolean andesiteOff = false;
+	public static boolean bucketOff = false;
 
 	public static void registerCraftingRecipies() {
 		
+		if (bucketOff){
+			GameRegistry.addShapedRecipe(new ItemStack(SimpleAddonsItems.wooden_bucket_empty), new Object[] {"P P", " P ", 'P', new ItemStack(Blocks.planks, 1, OreDictionary.WILDCARD_VALUE)});			
+		}
+		
+		if (graniteOff){
+			GameRegistry.addShapedRecipe(new ItemStack(SimpleAddonsTools.granite_axe), new Object[] {"GG ", "GS ", " S ", 'G', new ItemStack(Blocks.stone, 1, 2), 'S', Items.stick});
+			GameRegistry.addShapedRecipe(new ItemStack(SimpleAddonsTools.granite_axe), new Object[] {" GG", " SG", " S ", 'G', new ItemStack(Blocks.stone, 1, 2), 'S', Items.stick});
+			GameRegistry.addShapedRecipe(new ItemStack(SimpleAddonsTools.granite_hoe), new Object[] {"GG ", " S ", " S ", 'G', new ItemStack(Blocks.stone, 1, 2), 'S', Items.stick});
+			GameRegistry.addShapedRecipe(new ItemStack(SimpleAddonsTools.granite_hoe), new Object[] {" GG", " S ", " S ", 'G', new ItemStack(Blocks.stone, 1, 2), 'S',Items.stick});
+			GameRegistry.addShapedRecipe(new ItemStack(SimpleAddonsTools.granite_pickaxe), new Object[] {"GGG", " S ", " S ", 'G', new ItemStack(Blocks.stone, 1, 2), 'S', Items.stick});
+			GameRegistry.addShapedRecipe(new ItemStack(SimpleAddonsTools.granite_spade), new Object[] {" G ", " S ", " S ", 'G', new ItemStack(Blocks.stone, 1, 2), 'S', Items.stick});
+			GameRegistry.addShapedRecipe(new ItemStack(SimpleAddonsTools.granite_sword), new Object[] {" G ", " G ", " S ", 'G', new ItemStack(Blocks.stone, 1, 2), 'S', Items.stick});
+		}
+		
+		if (dioriteOff){
+			GameRegistry.addShapedRecipe(new ItemStack(SimpleAddonsTools.diorite_axe), new Object[] {"DD ", "DS ", " S ", 'D', new ItemStack(Blocks.stone, 1, 4), 'S', Items.stick});
+			GameRegistry.addShapedRecipe(new ItemStack(SimpleAddonsTools.diorite_axe), new Object[] {" DD", " SD", " S ", 'D', new ItemStack(Blocks.stone, 1, 4), 'S', Items.stick});
+			GameRegistry.addShapedRecipe(new ItemStack(SimpleAddonsTools.diorite_hoe), new Object[] {"DD ", " S ", " S ", 'D', new ItemStack(Blocks.stone, 1, 4), 'S', Items.stick});
+			GameRegistry.addShapedRecipe(new ItemStack(SimpleAddonsTools.diorite_hoe), new Object[] {" DD", " S ", " S ", 'D', new ItemStack(Blocks.stone, 1, 4), 'S', Items.stick});
+			GameRegistry.addShapedRecipe(new ItemStack(SimpleAddonsTools.diorite_pickaxe), new Object[] {"DDD", " S ", " S ", 'D', new ItemStack(Blocks.stone, 1, 4), 'S', Items.stick});
+			GameRegistry.addShapedRecipe(new ItemStack(SimpleAddonsTools.diorite_spade), new Object[] {" D ", " S ", " S ", 'D', new ItemStack(Blocks.stone, 1, 4), 'S', Items.stick});
+			GameRegistry.addShapedRecipe(new ItemStack(SimpleAddonsTools.diorite_sword), new Object[] {" D ", " D ", " S ", 'D', new ItemStack(Blocks.stone, 1, 4), 'S', Items.stick});
+		}
+		
+		if (andesiteOff){
+			GameRegistry.addShapedRecipe(new ItemStack(SimpleAddonsTools.andesite_axe), new Object[] {"AA ", "AS ", " S ", 'A', new ItemStack(Blocks.stone, 1, 6), 'S', Items.stick});
+			GameRegistry.addShapedRecipe(new ItemStack(SimpleAddonsTools.andesite_axe), new Object[] {" AA", " SA", " S ", 'A', new ItemStack(Blocks.stone, 1, 6), 'S', Items.stick});
+			GameRegistry.addShapedRecipe(new ItemStack(SimpleAddonsTools.andesite_hoe), new Object[] {"AA ", " S ", " S ", 'A', new ItemStack(Blocks.stone, 1, 6), 'S', Items.stick});
+			GameRegistry.addShapedRecipe(new ItemStack(SimpleAddonsTools.andesite_hoe), new Object[] {" AA", " S ", " S ", 'A', new ItemStack(Blocks.stone, 1, 6), 'S', Items.stick});
+			GameRegistry.addShapedRecipe(new ItemStack(SimpleAddonsTools.andesite_pickaxe), new Object[] {"AAA", " S ", " S ", 'A', new ItemStack(Blocks.stone, 1, 6), 'S', Items.stick});
+			GameRegistry.addShapedRecipe(new ItemStack(SimpleAddonsTools.andesite_spade), new Object[] {" A ", " S ", " S ", 'A', new ItemStack(Blocks.stone, 1, 6), 'S', Items.stick});
+			GameRegistry.addShapedRecipe(new ItemStack(SimpleAddonsTools.andesite_sword), new Object[] {" A ", " A ", " S ", 'A', new ItemStack(Blocks.stone, 1, 6), 'S', Items.stick});
+		}
+		
 		if (lampOff){
-		GameRegistry.addShapelessRecipe(new ItemStack(SimpleAddonsBlocks.lamp_block), new Object[] {Blocks.glass, Blocks.torch});
+			GameRegistry.addShapelessRecipe(new ItemStack(SimpleAddonsBlocks.lamp_block), new Object[] {Blocks.glass, Blocks.torch});
 		}
 		
 		if (clampOff){
@@ -139,6 +180,16 @@ public class CraftingRecipes {
 		if (scrap1Off){
 			GameRegistry.addShapelessRecipe(new ItemStack(SimpleAddonsItems.gold_scrap, 4), new Object[] {new ItemStack(SimpleAddonsItems.item_hammer, 1, OreDictionary.WILDCARD_VALUE), Items.golden_horse_armor});
 			GameRegistry.addShapelessRecipe(new ItemStack(SimpleAddonsItems.iron_scrap, 4), new Object[] {new ItemStack(SimpleAddonsItems.item_hammer, 1, OreDictionary.WILDCARD_VALUE), Items.iron_horse_armor});
+		}
+		
+		if (replaceOff){
+			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.stone_axe), "rr", "rs", " s", 'r', new ItemStack(Blocks.stone), 's', new ItemStack(Items.stick)));
+			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.stone_axe), "rr", "sr", "s ", 'r', new ItemStack(Blocks.stone), 's', new ItemStack(Items.stick)));
+			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.stone_hoe), "rr", " s", " s", 'r', new ItemStack(Blocks.stone), 's', new ItemStack(Items.stick)));
+			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.stone_hoe), "rr", "s ", "s ", 'r', new ItemStack(Blocks.stone), 's', new ItemStack(Items.stick)));
+			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.stone_sword), "r", "r", "s", 'r', new ItemStack(Blocks.stone), 's', new ItemStack(Items.stick)));
+			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.stone_shovel), "r", "s", "s", 'r', new ItemStack(Blocks.stone), 's', new ItemStack(Items.stick)));
+			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.stone_pickaxe), "rrr", " s ", " s ", 'r', new ItemStack(Blocks.stone), 's', new ItemStack(Items.stick)));
 		}
 		
 		GameRegistry.addShapedRecipe(new ItemStack(SimpleAddonsItems.knife), new Object[] {"  I", " I ", "S ", 'I', Items.iron_ingot, 'S', Items.stick});
