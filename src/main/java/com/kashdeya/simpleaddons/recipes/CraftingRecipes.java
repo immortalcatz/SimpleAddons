@@ -107,9 +107,9 @@ public class CraftingRecipes {
 		
 		if (juicesOff){
 			GameRegistry.addShapedRecipe(new ItemStack(SimpleAddonsItems.item_juicer), new Object[] {" S ", "S S", "SSS", 'S', Blocks.stone});
-			GameRegistry.addShapelessRecipe(new ItemStack(SimpleAddonsFood.apple_juice), new Object[] {Items.apple, new ItemStack(SimpleAddonsItems.item_juicer.setContainerItem(SimpleAddonsItems.item_juicer))});
-			GameRegistry.addShapelessRecipe(new ItemStack(SimpleAddonsFood.carrot_juice), new Object[] {Items.carrot, new ItemStack(SimpleAddonsItems.item_juicer.setContainerItem(SimpleAddonsItems.item_juicer))});
-			GameRegistry.addShapelessRecipe(new ItemStack(SimpleAddonsFood.cactus_juice), new Object[] {Blocks.cactus, new ItemStack(SimpleAddonsItems.item_juicer.setContainerItem(SimpleAddonsItems.item_juicer))});
+			GameRegistry.addShapelessRecipe(new ItemStack(SimpleAddonsFood.apple_juice), new Object[] {Items.apple, new ItemStack(SimpleAddonsItems.item_juicer)});
+			GameRegistry.addShapelessRecipe(new ItemStack(SimpleAddonsFood.carrot_juice), new Object[] {Items.carrot, new ItemStack(SimpleAddonsItems.item_juicer)});
+			GameRegistry.addShapelessRecipe(new ItemStack(SimpleAddonsFood.cactus_juice), new Object[] {Blocks.cactus, new ItemStack(SimpleAddonsItems.item_juicer)});
 		}
 		
 		if (baconOff){
@@ -201,8 +201,8 @@ public class CraftingRecipes {
 		}
 		
 		if (growthOff){
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(SimpleAddonsBlocks.growth_block), "CBC", "BEB", "CBC", 'C', new ItemStack(SimpleAddonsItems.crushed_obsidian), 'B', new ItemStack(Items.dye, 1, 1), 'E', new ItemStack(Items.emerald)));
-			GameRegistry.addShapelessRecipe(new ItemStack(SimpleAddonsItems.crushed_obsidian, 2), new Object[] {new ItemStack(SimpleAddonsItems.item_dthammer, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.obsidian)});
+			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(SimpleAddonsBlocks.growth_block), "CBC", "BEB", "CBC", 'C', new ItemStack(SimpleAddonsItems.crushed_obsidian), 'B', new ItemStack(Items.dye, 1, 15), 'E', new ItemStack(Items.emerald)));
+			GameRegistry.addShapelessRecipe(new ItemStack(SimpleAddonsItems.crushed_obsidian, 2), new Object[] {new ItemStack(SimpleAddonsItems.item_dthammer, 1, OreDictionary.WILDCARD_VALUE), Blocks.obsidian});
 			GameRegistry.addShapedRecipe(new ItemStack(Blocks.obsidian, 2), new Object[] {"CC", "CC", 'C', new ItemStack(SimpleAddonsItems.crushed_obsidian)});
 		}
 		

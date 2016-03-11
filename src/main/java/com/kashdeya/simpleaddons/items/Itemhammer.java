@@ -22,10 +22,9 @@ public class Itemhammer extends ItemPickaxe{
 		this.setFull3D();
 		super.setMaxStackSize(1);
 		super.setContainerItem(this);
-		this.setHarvestLevel("pickaxe", 2);
 		super.showDurabilityBar(new ItemStack(this));
 		this.setCreativeTab(SimpleAddons.tabItems);
-		this.attackDamage = 3.0F + material.getDamageVsEntity();
+		this.attackDamage = 3.0F;
 	}
 	
 	public boolean doesContainerItemLeaveCraftingGrid(ItemStack stack)
@@ -44,7 +43,7 @@ public class Itemhammer extends ItemPickaxe{
 	{
 		ItemStack stack = itemStack.copy();
 
-		stack.setItemDamage(stack.getItemDamage() + 6);
+		stack.setItemDamage(stack.getItemDamage() + 1);
 		stack.stackSize = 1;
 
 		return stack;

@@ -26,6 +26,7 @@ public class Itembucket extends ItemBucket{
 	public Itembucket(Block containedBlock) {
 		super(containedBlock);
 		this.isFull = containedBlock;
+		super.setContainerItem(SimpleAddonsItems.wooden_bucket_empty);
 		this.setCreativeTab(SimpleAddons.tabItems);
 	}
 	

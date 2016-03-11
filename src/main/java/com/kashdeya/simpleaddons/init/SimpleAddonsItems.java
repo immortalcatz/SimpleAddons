@@ -9,14 +9,17 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 import com.kashdeya.simpleaddons.Reference;
 import com.kashdeya.simpleaddons.SimpleAddons;
+import com.kashdeya.simpleaddons.items.Itembowl;
 import com.kashdeya.simpleaddons.items.Itembucket;
 import com.kashdeya.simpleaddons.items.Itemdthammer;
 import com.kashdeya.simpleaddons.items.Itemhammer;
+import com.kashdeya.simpleaddons.items.Itemjuice;
 import com.kashdeya.simpleaddons.items.Itemknife;
+import com.kashdeya.simpleaddons.items.Itemmortar;
 
 public class SimpleAddonsItems {
 	
-	public static final Item.ToolMaterial knifeMaterial = EnumHelper.addToolMaterial("knifeMaterial", 1, 100, 0.2F, 0.0F, 14);
+	public static final Item.ToolMaterial knifeMaterial = EnumHelper.addToolMaterial("knifeMaterial", 1, 600, 0.2F, 0.0F, 14);
 
 	public static Item knife;
 	public static Item item_juicer;
@@ -39,7 +42,7 @@ public class SimpleAddonsItems {
 	public static void init(){
 		
 		knife = new Itemknife("knife", 100, knifeMaterial).setUnlocalizedName("knife");
-		item_juicer = new Item().setUnlocalizedName("item_juicer").setCreativeTab(SimpleAddons.tabItems);
+		item_juicer = new Itemjuice().setUnlocalizedName("item_juicer");
 		item_hammer = new Itemhammer("item_hammer", 150, knifeMaterial).setUnlocalizedName("item_hammer");
 		item_dthammer = new Itemdthammer("item_dthammer", 600, knifeMaterial).setUnlocalizedName("item_dthammer");
 		item_chain = new Item().setUnlocalizedName("item_chain").setCreativeTab(SimpleAddons.tabItems);
@@ -50,10 +53,10 @@ public class SimpleAddonsItems {
 		wooden_bucket_water = new Itembucket(Blocks.flowing_water).setUnlocalizedName("wooden_bucket_water");
 		unfired_mortar = new Item().setUnlocalizedName("unfired_mortar").setCreativeTab(SimpleAddons.tabItems);
 		fired_mortar = new Item().setUnlocalizedName("fired_mortar").setCreativeTab(SimpleAddons.tabItems);
-		mortar_pestle = new Item().setUnlocalizedName("mortar_pestle").setCreativeTab(SimpleAddons.tabItems);
+		mortar_pestle = new Itemmortar().setUnlocalizedName("mortar_pestle");
 		item_flour = new Item().setUnlocalizedName("item_flour").setCreativeTab(SimpleAddons.tabItems);
 		item_dough = new Item().setUnlocalizedName("item_dough").setCreativeTab(SimpleAddons.tabItems);
-		mixing_bowl = new Item().setUnlocalizedName("mixing_bowl").setCreativeTab(SimpleAddons.tabItems);
+		mixing_bowl = new Itembowl().setUnlocalizedName("mixing_bowl");
 		crushed_obsidian = new Item().setUnlocalizedName("crushed_obsidian").setCreativeTab(SimpleAddons.tabItems);
 		
 	}

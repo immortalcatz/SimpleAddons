@@ -32,9 +32,9 @@ public class VanillaHandler {
 		if (breadOff){
 			removeRecipe(new ItemStack(Items.bread));
 			
-			GameRegistry.addShapelessRecipe(new ItemStack(SimpleAddonsItems.item_flour), new Object[] {Items.wheat, SimpleAddonsItems.mortar_pestle.setContainerItem(SimpleAddonsItems.mortar_pestle)});
-			GameRegistry.addShapelessRecipe(new ItemStack(SimpleAddonsItems.item_dough), new Object[] {SimpleAddonsItems.item_flour, SimpleAddonsItems.wooden_bucket_water.setContainerItem(SimpleAddonsItems.wooden_bucket_empty), SimpleAddonsItems.mixing_bowl.setContainerItem(SimpleAddonsItems.mixing_bowl)});
-			GameRegistry.addShapelessRecipe(new ItemStack(SimpleAddonsItems.item_dough), new Object[] {SimpleAddonsItems.item_flour, Items.water_bucket.setContainerItem(Items.bucket), SimpleAddonsItems.mixing_bowl.setContainerItem(SimpleAddonsItems.mixing_bowl)});
+			GameRegistry.addShapelessRecipe(new ItemStack(SimpleAddonsItems.item_flour), new Object[] {Items.wheat, SimpleAddonsItems.mortar_pestle});
+			GameRegistry.addShapelessRecipe(new ItemStack(SimpleAddonsItems.item_dough), new Object[] {SimpleAddonsItems.item_flour, SimpleAddonsItems.wooden_bucket_water, SimpleAddonsItems.mixing_bowl});
+			GameRegistry.addShapelessRecipe(new ItemStack(SimpleAddonsItems.item_dough), new Object[] {SimpleAddonsItems.item_flour, Items.water_bucket, SimpleAddonsItems.mixing_bowl});
 			
 			GameRegistry.addSmelting(SimpleAddonsItems.item_dough, new ItemStack(Items.bread), 0.5F);
 			}
