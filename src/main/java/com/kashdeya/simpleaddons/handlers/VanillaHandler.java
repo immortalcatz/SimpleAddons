@@ -33,8 +33,7 @@ public class VanillaHandler {
 			removeRecipe(new ItemStack(Items.bread));
 			
 			GameRegistry.addShapelessRecipe(new ItemStack(SimpleAddonsItems.item_flour), new Object[] {Items.wheat, SimpleAddonsItems.mortar_pestle});
-			GameRegistry.addShapelessRecipe(new ItemStack(SimpleAddonsItems.item_dough), new Object[] {SimpleAddonsItems.item_flour, SimpleAddonsItems.wooden_bucket_water, SimpleAddonsItems.mixing_bowl});
-			GameRegistry.addShapelessRecipe(new ItemStack(SimpleAddonsItems.item_dough), new Object[] {SimpleAddonsItems.item_flour, Items.water_bucket, SimpleAddonsItems.mixing_bowl});
+			GameRegistry.addShapelessRecipe(new ItemStack(SimpleAddonsItems.item_dough), new Object[] {SimpleAddonsItems.item_flour, Items.potionitem, SimpleAddonsItems.mixing_bowl});
 			
 			GameRegistry.addSmelting(SimpleAddonsItems.item_dough, new ItemStack(Items.bread), 0.5F);
 			}

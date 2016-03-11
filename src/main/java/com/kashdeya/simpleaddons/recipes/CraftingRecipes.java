@@ -155,7 +155,7 @@ public class CraftingRecipes {
 		}
 		
 		if (hammerOff){
-			GameRegistry.addShapedRecipe(new ItemStack(SimpleAddonsItems.item_hammer), new Object[] {"III", "ITI", " S ", 'I', Items.iron_ingot, 'S', Items.stick, 'T', Items.string});
+			GameRegistry.addShapedRecipe(new ItemStack(SimpleAddonsItems.item_hammer), new Object[] {"ITI", " S ", 'I', Items.iron_ingot, 'S', Items.stick, 'T', Items.string});
 		}
 		
 		if (dthammerOff){
