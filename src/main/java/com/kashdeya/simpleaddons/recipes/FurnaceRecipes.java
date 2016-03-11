@@ -16,37 +16,39 @@ public class FurnaceRecipes {
 	public static boolean eggOff = false;
 	public static boolean brownOff = false;
 	public static boolean redOff = false;
-	public static boolean scrapOff = true;
+	public static boolean scrapOff = false;
 
 	public static void registerFurnaceRecipies() {
 		if (cookedbaconOff){
-		GameRegistry.addSmelting(SimpleAddonsFood.bacon, new ItemStack(SimpleAddonsFood.cooked_bacon), 0.5F);
+			GameRegistry.addSmelting(SimpleAddonsFood.bacon, new ItemStack(SimpleAddonsFood.cooked_bacon), 0.5F);
 		}
 		
 		if (toastOff){
-		GameRegistry.addSmelting(Items.bread, new ItemStack(SimpleAddonsFood.toast), 0.5F);
+			GameRegistry.addSmelting(Items.bread, new ItemStack(SimpleAddonsFood.toast), 0.5F);
 		}
 		
 		if (fleshOff){
-		GameRegistry.addSmelting(Items.rotten_flesh, new ItemStack(SimpleAddonsFood.monster_jerky), 0.5F);
+			GameRegistry.addSmelting(Items.rotten_flesh, new ItemStack(SimpleAddonsFood.monster_jerky), 0.5F);
 		}
 		
 		if (eggOff){
-		GameRegistry.addSmelting(Items.egg, new ItemStack(SimpleAddonsFood.fried_egg), 0.5F);
+			GameRegistry.addSmelting(Items.egg, new ItemStack(SimpleAddonsFood.fried_egg), 0.5F);
 		}
 		
 		if (brownOff){
-		GameRegistry.addSmelting(Blocks.brown_mushroom, new ItemStack(SimpleAddonsFood.cooked_mushroom_brown), 0.5F);
+			GameRegistry.addSmelting(Blocks.brown_mushroom, new ItemStack(SimpleAddonsFood.cooked_mushroom_brown), 0.5F);
 		}
 		
 		if (redOff){
-		GameRegistry.addSmelting(Blocks.red_mushroom, new ItemStack(SimpleAddonsFood.cooked_mushroom_red), 0.5F);
+			GameRegistry.addSmelting(Blocks.red_mushroom, new ItemStack(SimpleAddonsFood.cooked_mushroom_red), 0.5F);
 		}
 		
 		if (scrapOff){
-		GameRegistry.addSmelting(SimpleAddonsItems.gold_scrap, new ItemStack(Items.gold_ingot), 0.5F);
-		GameRegistry.addSmelting(SimpleAddonsItems.iron_scrap, new ItemStack(Items.iron_ingot), 0.5F);
+			GameRegistry.addSmelting(SimpleAddonsItems.gold_scrap, new ItemStack(Items.gold_ingot), 0.5F);
+			GameRegistry.addSmelting(SimpleAddonsItems.iron_scrap, new ItemStack(Items.iron_ingot), 0.5F);
 		}
+		
+			GameRegistry.addSmelting(SimpleAddonsItems.unfired_mortar, new ItemStack(SimpleAddonsItems.fired_mortar), 0.5F);
 		
 	}	
 	

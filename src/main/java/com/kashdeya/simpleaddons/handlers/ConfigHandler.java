@@ -1,10 +1,12 @@
 package com.kashdeya.simpleaddons.handlers;
 
+import java.io.File;
+
 import net.minecraftforge.common.config.Configuration;
 
-import com.kashdeya.simpleaddons.init.SimpleAddonsTools;
 import com.kashdeya.simpleaddons.recipes.CraftingRecipes;
 import com.kashdeya.simpleaddons.recipes.FurnaceRecipes;
+import com.kashdeya.simpleaddons.handlers.VanillaHandler;
 
 public class ConfigHandler
 {
@@ -15,11 +17,15 @@ public class ConfigHandler
 	public static int LadderBurnTime = 100;
 	public static int WoodenPressurePlateBurnTime = 100;
 	public static int SignBurnTime = 100;
+	
+	public static final File configDir = new File("config/SimpleAddons");
 
 	public static void initConfigs()
 	{
-		if(config == null)
 		
+		File f = new File(configDir, "SimpleAddons.cfg");
+        config = new Configuration(f);
+        
 		config.load();
 		
 		String category;
@@ -32,6 +38,7 @@ public class ConfigHandler
         CraftingRecipes.baconOff = config.getBoolean("Bacon",  category, true, "Enable bacon?");
         CraftingRecipes.bneOff = config.getBoolean("Bacon & Eggs",  category, true, "Enable bacon and eggs?");
         CraftingRecipes.hammerOff = config.getBoolean("Hammer",  category, true, "Enable Hammer Recipes?");
+        CraftingRecipes.dthammerOff = config.getBoolean("Diamond Tipped Hammer", category, true, "Enable Diamond Tipped Hammer?");
         CraftingRecipes.chainOff = config.getBoolean("Chain Armour",  category, true, "Enable Chain Armour?");
         CraftingRecipes.chestOff = config.getBoolean("Chest",  category, true, "Enable Chest Recipe?");
         CraftingRecipes.reedOff = config.getBoolean("Old Reeds",  category, true, "Enable Sugarcane Recipe?");
@@ -39,6 +46,7 @@ public class ConfigHandler
         CraftingRecipes.charcoalOff = config.getBoolean("Charcoal Block", category, true, "Enable Charcoal Block?");
         CraftingRecipes.leatherOff = config.getBoolean("Leather",  category, true, "Enable rotten flesh to leather?");
         CraftingRecipes.bucketOff = config.getBoolean("Wooden Bucket",  category, true, "Enable Wooden Bucket?");
+        CraftingRecipes.growthOff = config.getBoolean("Growth Crystal", category, true, "Enable Growth Crystal?");
 
 		//Crafting Recipes
         config.addCustomCategoryComment(category + " Vanilla Recipes", "TRUE = Yes and FALSE = No");
@@ -49,9 +57,11 @@ public class ConfigHandler
         CraftingRecipes.cobwebOff = config.getBoolean("Cobweb",  category+ " Vanilla Recipes", true, "Enable Cobweb?");
         CraftingRecipes.iceOff = config.getBoolean("Ice",  category+ " Vanilla Recipes", true, "Enable Ice?");
         CraftingRecipes.packedOff = config.getBoolean("Packed Ice",  category+ " Vanilla Recipes", true, "Enable Packed Ice?");
-        CraftingRecipes.slabOff = config.getBoolean("Slab",  category+ " Vanilla Recipes", false, "Enable Cobble Slabs to Blocks?");        
-        SimpleAddonsTools.removeOff = config.getBoolean("Stone Tools", category, true, "Remove Vanilla stone tools?");
-        CraftingRecipes.replaceOff = config.getBoolean("Stone Tools", category, true, "Enable real stone tools?");
+        CraftingRecipes.slabOff = config.getBoolean("Slab",  category+ " Vanilla Recipes", false, "Enable Cobble Slabs to Blocks?");
+        CraftingRecipes.replaceOff = config.getBoolean("Stone Tools", category+ " Vanilla Recipes", true, "Enable real stone tools?");
+        VanillaHandler.removeOff = config.getBoolean("Stone Tools", category+ " Vanilla Recipes", true, "Remove Vanilla stone tools?");
+        VanillaHandler.breadOff = config.getBoolean("Bread Recipe", category+ " Vanilla Recipes", true, "Remove Vanilla Bread Recipe?");
+        VanillaHandler.endstoneOff = config.getBoolean("EndStone Recipe", category+ " Vanilla Recipes", true, "Enable endstone Recipe?");        
         
         //Furnace Recipes
         config.addCustomCategoryComment(category + " Furnace Recipes", "TRUE = Yes and FALSE = No");

@@ -29,6 +29,7 @@ public class CraftingRecipes {
 	public static boolean packedOff = false;
 	public static boolean slabOff = false;
 	public static boolean hammerOff = false;
+	public static boolean dthammerOff = false;
 	public static boolean chainOff = false;
 	public static boolean charcoalOff = false;
 	public static boolean chestOff = false;
@@ -39,6 +40,7 @@ public class CraftingRecipes {
 	public static boolean dioriteOff = false;
 	public static boolean andesiteOff = false;
 	public static boolean bucketOff = false;
+	public static boolean growthOff = false;
 
 	public static void registerCraftingRecipies() {
 		
@@ -105,9 +107,9 @@ public class CraftingRecipes {
 		
 		if (juicesOff){
 			GameRegistry.addShapedRecipe(new ItemStack(SimpleAddonsItems.item_juicer), new Object[] {" S ", "S S", "SSS", 'S', Blocks.stone});
-			GameRegistry.addShapelessRecipe(new ItemStack(SimpleAddonsFood.apple_juice), new Object[] {Items.apple, new ItemStack(SimpleAddonsItems.item_juicer, 1, OreDictionary.WILDCARD_VALUE)});
-			GameRegistry.addShapelessRecipe(new ItemStack(SimpleAddonsFood.carrot_juice), new Object[] {Items.carrot, new ItemStack(SimpleAddonsItems.item_juicer, 1, OreDictionary.WILDCARD_VALUE)});
-			GameRegistry.addShapelessRecipe(new ItemStack(SimpleAddonsFood.cactus_juice), new Object[] {Blocks.cactus, new ItemStack(SimpleAddonsItems.item_juicer, 1, OreDictionary.WILDCARD_VALUE)});
+			GameRegistry.addShapelessRecipe(new ItemStack(SimpleAddonsFood.apple_juice), new Object[] {Items.apple, new ItemStack(SimpleAddonsItems.item_juicer.setContainerItem(SimpleAddonsItems.item_juicer))});
+			GameRegistry.addShapelessRecipe(new ItemStack(SimpleAddonsFood.carrot_juice), new Object[] {Items.carrot, new ItemStack(SimpleAddonsItems.item_juicer.setContainerItem(SimpleAddonsItems.item_juicer))});
+			GameRegistry.addShapelessRecipe(new ItemStack(SimpleAddonsFood.cactus_juice), new Object[] {Blocks.cactus, new ItemStack(SimpleAddonsItems.item_juicer.setContainerItem(SimpleAddonsItems.item_juicer))});
 		}
 		
 		if (baconOff){
@@ -115,7 +117,7 @@ public class CraftingRecipes {
 		}
 		
 		if (bneOff){
-			GameRegistry.addShapelessRecipe(new ItemStack(SimpleAddonsFood.bacon_eggs), new Object[] {SimpleAddonsItems.item_plate, SimpleAddonsFood.cooked_bacon, SimpleAddonsFood.fried_egg});
+			GameRegistry.addShapelessRecipe(new ItemStack(SimpleAddonsFood.bacon_eggs), new Object[] {SimpleAddonsFood.cooked_bacon, SimpleAddonsFood.fried_egg, SimpleAddonsFood.fried_egg});
 		}
 		
 		if (nametagOff){
@@ -156,6 +158,10 @@ public class CraftingRecipes {
 			GameRegistry.addShapedRecipe(new ItemStack(SimpleAddonsItems.item_hammer), new Object[] {"III", "ITI", " S ", 'I', Items.iron_ingot, 'S', Items.stick, 'T', Items.string});
 		}
 		
+		if (dthammerOff){
+			GameRegistry.addShapelessRecipe(new ItemStack(SimpleAddonsItems.item_dthammer), new Object[] {SimpleAddonsItems.item_hammer, Items.diamond});
+		}
+		
 		if (chainOff){
 			GameRegistry.addShapedRecipe(new ItemStack(Items.chainmail_helmet), new Object[] {"CCC", "C C", 'C', new ItemStack(SimpleAddonsItems.item_chain)});
 			GameRegistry.addShapedRecipe(new ItemStack(Items.chainmail_chestplate), new Object[] {"C C", "CCC", "CCC", 'C', new ItemStack(SimpleAddonsItems.item_chain)});
@@ -180,6 +186,8 @@ public class CraftingRecipes {
 		if (scrap1Off){
 			GameRegistry.addShapelessRecipe(new ItemStack(SimpleAddonsItems.gold_scrap, 4), new Object[] {new ItemStack(SimpleAddonsItems.item_hammer, 1, OreDictionary.WILDCARD_VALUE), Items.golden_horse_armor});
 			GameRegistry.addShapelessRecipe(new ItemStack(SimpleAddonsItems.iron_scrap, 4), new Object[] {new ItemStack(SimpleAddonsItems.item_hammer, 1, OreDictionary.WILDCARD_VALUE), Items.iron_horse_armor});
+			GameRegistry.addShapelessRecipe(new ItemStack(SimpleAddonsItems.gold_scrap, 4), new Object[] {new ItemStack(SimpleAddonsItems.item_dthammer, 1, OreDictionary.WILDCARD_VALUE), Items.golden_horse_armor});
+			GameRegistry.addShapelessRecipe(new ItemStack(SimpleAddonsItems.iron_scrap, 4), new Object[] {new ItemStack(SimpleAddonsItems.item_dthammer, 1, OreDictionary.WILDCARD_VALUE), Items.iron_horse_armor});
 		}
 		
 		if (replaceOff){
@@ -192,8 +200,16 @@ public class CraftingRecipes {
 			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.stone_pickaxe), "rrr", " s ", " s ", 'r', new ItemStack(Blocks.stone), 's', new ItemStack(Items.stick)));
 		}
 		
+		if (growthOff){
+			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(SimpleAddonsBlocks.growth_block), "CBC", "BEB", "CBC", 'C', new ItemStack(SimpleAddonsItems.crushed_obsidian), 'B', new ItemStack(Items.dye, 1, 1), 'E', new ItemStack(Items.emerald)));
+			GameRegistry.addShapelessRecipe(new ItemStack(SimpleAddonsItems.crushed_obsidian, 2), new Object[] {new ItemStack(SimpleAddonsItems.item_dthammer, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.obsidian)});
+			GameRegistry.addShapedRecipe(new ItemStack(Blocks.obsidian, 2), new Object[] {"CC", "CC", 'C', new ItemStack(SimpleAddonsItems.crushed_obsidian)});
+		}
+		
 		GameRegistry.addShapedRecipe(new ItemStack(SimpleAddonsItems.knife), new Object[] {"  I", " I ", "S ", 'I', Items.iron_ingot, 'S', Items.stick});
-		GameRegistry.addShapelessRecipe(new ItemStack(SimpleAddonsItems.item_plate), new Object[] {Blocks.stone_pressure_plate, Blocks.glass_pane});
+		GameRegistry.addShapedRecipe(new ItemStack(SimpleAddonsItems.unfired_mortar), new Object[] {"C C", "C C", " C ", 'C', Items.clay_ball});
+		GameRegistry.addShapedRecipe(new ItemStack(SimpleAddonsItems.mixing_bowl), new Object[] {"B B", "BBB", 'B', Items.brick});
+		GameRegistry.addShapelessRecipe(new ItemStack(SimpleAddonsItems.mortar_pestle), new Object[] {new ItemStack(SimpleAddonsItems.fired_mortar), new ItemStack(Items.stick)});
 		
 	}
 }

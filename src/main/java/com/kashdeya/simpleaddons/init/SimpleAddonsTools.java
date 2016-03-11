@@ -28,8 +28,6 @@ public class SimpleAddonsTools {
 	public static final Item.ToolMaterial dioriteToolMaterial = EnumHelper.addToolMaterial("dioriteToolMaterial", 1, 190, 5.0F, 1.25F, 16);
 	public static final Item.ToolMaterial graniteToolMaterial = EnumHelper.addToolMaterial("graniteToolMaterial", 1, 160, 4.0F, 1.75F, 10);
 	
-	public static boolean removeOff = false;
-	
 	public static Item andesite_pickaxe;
 	public static Item andesite_spade;
 	public static Item andesite_axe;
@@ -47,14 +45,6 @@ public class SimpleAddonsTools {
 	public static Item granite_hoe;
 	
 		public static void init(){
-			
-			if (!removeOff){
-			removeRecipe(new ItemStack(Items.stone_axe));
-			removeRecipe(new ItemStack(Items.stone_hoe));
-			removeRecipe(new ItemStack(Items.stone_sword));
-			removeRecipe(new ItemStack(Items.stone_shovel));
-			removeRecipe(new ItemStack(Items.stone_pickaxe));
-			}
 			
 			andesite_pickaxe = new ToolsPickaxe(andesiteToolMaterial, new ItemStack(Blocks.stone, 1, 6)).setUnlocalizedName("andesite_pickaxe");
 			andesite_spade = new ToolsSpade(andesiteToolMaterial, new ItemStack(Blocks.stone, 1, 6)).setUnlocalizedName("andesite_spade");
@@ -116,21 +106,6 @@ public class SimpleAddonsTools {
 		
 		public static void registerRender(Item item){
 			Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, new ModelResourceLocation(Reference.MOD_ID + ":" + item.getUnlocalizedName().substring(5), "inventory"));
-		}
-		
-		private static void removeRecipe(ItemStack resultItem){
-			ItemStack recipeResult;
-			ArrayList recipes = (ArrayList) CraftingManager.getInstance().getRecipeList();
-			for(int scan = 0;scan < recipes.size();scan++){
-				IRecipe tmpRecipe = (IRecipe) recipes.get(scan);
-				recipeResult = tmpRecipe.getRecipeOutput();
-				if(recipeResult != null){
-					if(recipeResult.getItem() == resultItem.getItem() && recipeResult.getItemDamage() == resultItem.getItemDamage()){
-						recipes.remove(scan);
-						scan--;
-					}
-				}
-			}
 		}
 
 }

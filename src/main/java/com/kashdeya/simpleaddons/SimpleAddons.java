@@ -14,6 +14,7 @@ import com.kashdeya.simpleaddons.creativetabs.TabSimpleAddonsFood;
 import com.kashdeya.simpleaddons.creativetabs.TabSimpleAddonsItems;
 import com.kashdeya.simpleaddons.creativetabs.TabSimpleAddonsTools;
 import com.kashdeya.simpleaddons.handlers.ConfigHandler;
+import com.kashdeya.simpleaddons.handlers.VanillaHandler;
 import com.kashdeya.simpleaddons.init.SimpleAddonsBlocks;
 import com.kashdeya.simpleaddons.init.SimpleAddonsFood;
 import com.kashdeya.simpleaddons.init.SimpleAddonsItems;
@@ -44,8 +45,8 @@ public class SimpleAddons {
 		SimpleAddonsFood.register();
 		SimpleAddonsTools.init();
 		SimpleAddonsTools.register();
-		ConfigHandler.config = new Configuration(event.getSuggestedConfigurationFile(), true);
 		ConfigHandler.initConfigs();
+		VanillaHandler.initRemove();
 	}
 	
 	@EventHandler

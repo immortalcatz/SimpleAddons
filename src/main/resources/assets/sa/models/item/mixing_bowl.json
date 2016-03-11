@@ -1,7 +1,7 @@
 {
     "parent": "builtin/generated",
     "textures": {
-        "layer0": "sa:items/item_plate"
+        "layer0": "sa:items/mixing_bowl"
     },
     "display": {
         "thirdperson": {
