@@ -38,6 +38,7 @@ public class SimpleAddonsItems {
 	public static Item item_dough;
 	public static Item mixing_bowl;
 	public static Item crushed_obsidian;
+	public static Item rotten_leather;
 	
 	public static void init(){
 		
@@ -58,7 +59,7 @@ public class SimpleAddonsItems {
 		item_dough = new Item().setUnlocalizedName("item_dough").setCreativeTab(SimpleAddons.tabItems);
 		mixing_bowl = new Itembowl().setUnlocalizedName("mixing_bowl");
 		crushed_obsidian = new Item().setUnlocalizedName("crushed_obsidian").setCreativeTab(SimpleAddons.tabItems);
-		
+		rotten_leather = new Item().setUnlocalizedName("rotten_leather").setCreativeTab(SimpleAddons.tabItems);
 	}
 	
 	public static void register(){
@@ -79,6 +80,7 @@ public class SimpleAddonsItems {
 		GameRegistry.registerItem(item_dough, item_dough.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(mixing_bowl, mixing_bowl.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(crushed_obsidian, crushed_obsidian.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(rotten_leather, rotten_leather.getUnlocalizedName().substring(5));
 	}
 	
 	public static void registerRenders(){
@@ -99,6 +101,7 @@ public class SimpleAddonsItems {
 		registerRender(item_dough);
 		registerRender(mixing_bowl);
 		registerRender(crushed_obsidian);
+		registerRender(rotten_leather);
 	}
 	
 	public static void registerRender(Item item){

@@ -48,7 +48,7 @@ public class ConfigHandler
         CraftingRecipes.bucketOff = config.getBoolean("Wooden Bucket",  category, true, "Enable Wooden Bucket?");
         CraftingRecipes.growthOff = config.getBoolean("Growth Crystal", category, true, "Enable Growth Crystal?");
 
-		//Crafting Recipes
+		//Vanilla Recipes
         config.addCustomCategoryComment(category + " Vanilla Recipes", "TRUE = Yes and FALSE = No");
         CraftingRecipes.nametagOff = config.getBoolean("Name Tag",  category+ " Vanilla Recipes", true, "Enable name tag recipe?");
         CraftingRecipes.saddleOff = config.getBoolean("Saddle",  category+ " Vanilla Recipes", true, "Enable Saddle?");
@@ -61,7 +61,8 @@ public class ConfigHandler
         CraftingRecipes.replaceOff = config.getBoolean("Stone Tools", category+ " Vanilla Recipes", true, "Enable real stone tools?");
         VanillaHandler.removeOff = config.getBoolean("Stone Tools", category+ " Vanilla Recipes", true, "Remove Vanilla stone tools?");
         VanillaHandler.breadOff = config.getBoolean("Bread Recipe", category+ " Vanilla Recipes", true, "Remove Vanilla Bread Recipe?");
-        VanillaHandler.endstoneOff = config.getBoolean("EndStone Recipe", category+ " Vanilla Recipes", true, "Enable endstone Recipe?");        
+        VanillaHandler.endstoneOff = config.getBoolean("EndStone Recipe", category+ " Vanilla Recipes", true, "Enable endstone Recipe?");
+        CraftingRecipes.coarseOff = config.getBoolean("Coarse Recipe", category+ " Vanilla Recipes", true, "Enable Coarse dirt to dirt Recipe?");
         
         //Furnace Recipes
         config.addCustomCategoryComment(category + " Furnace Recipes", "TRUE = Yes and FALSE = No");

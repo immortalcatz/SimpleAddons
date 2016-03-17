@@ -41,11 +41,16 @@ public class CraftingRecipes {
 	public static boolean andesiteOff = false;
 	public static boolean bucketOff = false;
 	public static boolean growthOff = false;
+	public static boolean coarseOff = false;
 
 	public static void registerCraftingRecipies() {
 		
 		if (bucketOff){
-			GameRegistry.addShapedRecipe(new ItemStack(SimpleAddonsItems.wooden_bucket_empty), new Object[] {"P P", " P ", 'P', new ItemStack(Blocks.planks, 1, OreDictionary.WILDCARD_VALUE)});			
+			GameRegistry.addShapedRecipe(new ItemStack(SimpleAddonsItems.wooden_bucket_empty), new Object[] {"P P", " S ", 'P', new ItemStack(Blocks.planks, 1, OreDictionary.WILDCARD_VALUE), 'S', new ItemStack(Blocks.wooden_slab, 1, OreDictionary.WILDCARD_VALUE)});			
+		}
+		
+		if (coarseOff){
+			GameRegistry.addShapedRecipe(new ItemStack(Blocks.dirt,8), new Object[] {"CCC", "CBC", "CCC", 'C', new ItemStack(Blocks.dirt, 1, 1), 'B', new ItemStack(Items.water_bucket)});
 		}
 		
 		if (graniteOff){
@@ -102,7 +107,8 @@ public class CraftingRecipes {
 		}
 		
 		if (leatherOff){
-			GameRegistry.addShapedRecipe(new ItemStack(Items.leather), new Object[] {"##", "##", '#', Items.rotten_flesh});
+			GameRegistry.addShapedRecipe(new ItemStack(SimpleAddonsItems.rotten_leather), new Object[] {"##", "##", '#', Items.rotten_flesh});
+			GameRegistry.addSmelting(SimpleAddonsItems.rotten_leather, new ItemStack(Items.leather), 0.5F);
 		}
 		
 		if (juicesOff){

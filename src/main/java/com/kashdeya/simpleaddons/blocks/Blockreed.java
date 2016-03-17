@@ -9,6 +9,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.BlockPos;
+import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumWorldBlockLayer;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
@@ -26,11 +27,48 @@ public class Blockreed extends Block implements net.minecraftforge.common.IPlant
         float f = 0.375F;
         this.setBlockBounds(0.5F - f, 0.0F, 0.5F - f, 0.5F + f, 1.0F, 0.5F + f);
         this.setCreativeTab(SimpleAddons.tabBlock);
+        this.setHardness(0.0F);
+        this.setStepSound(soundTypeGrass);
     }
     
-	boolean canPlaceBlockOn(Block ground)
+	public boolean canPlaceBlockAt(World worldIn, BlockPos pos)
     {
-        return ground == Blocks.grass || ground == Blocks.dirt || ground == Blocks.sand;
+        Block block = worldIn.getBlockState(pos.down()).getBlock();
+        if (block.canSustainPlant(worldIn, pos.down(), EnumFacing.UP, this)) return true;
+
+        if (block == this)
+        {
+            return true;
+        }
+        else if (block != Blocks.grass && block != Blocks.dirt && block != Blocks.sand)
+        {
+            return false;
+        }
+		return false;
+    }
+    
+    public void onNeighborBlockChange(World worldIn, BlockPos pos, IBlockState state, Block neighborBlock)
+    {
+        this.checkForDrop(worldIn, pos, state);
+    }
+
+    protected final boolean checkForDrop(World worldIn, BlockPos pos, IBlockState state)
+    {
+        if (this.canBlockStay(worldIn, pos))
+        {
+            return true;
+        }
+        else
+        {
+            this.dropBlockAsItem(worldIn, pos, state, 0);
+            worldIn.setBlockToAir(pos);
+            return false;
+        }
+    }
+    
+    public boolean canBlockStay(World worldIn, BlockPos pos)
+    {
+        return this.canPlaceBlockAt(worldIn, pos);
     }
     
     public AxisAlignedBB getCollisionBoundingBox(World worldIn, BlockPos pos, IBlockState state)
