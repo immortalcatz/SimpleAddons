@@ -57,7 +57,6 @@ public class ConfigHandler
         CraftingRecipes.iceOff = config.getBoolean("Ice",  category+ " Vanilla Recipes", true, "Enable Ice?");
         CraftingRecipes.packedOff = config.getBoolean("Packed Ice",  category+ " Vanilla Recipes", true, "Enable Packed Ice?");
         CraftingRecipes.slabOff = config.getBoolean("Slab",  category+ " Vanilla Recipes", false, "Enable Cobble Slabs to Blocks?");
-        CraftingRecipes.replaceOff = config.getBoolean("Stone Tools", category+ " Vanilla Recipes", true, "Enable real stone tools?");
         CraftingRecipes.coarseOff = config.getBoolean("Coarse Recipe", category+ " Vanilla Recipes", true, "Enable Coarse dirt to dirt Recipe?");
         VanillaHandler.removeOff = config.getBoolean("Stone Tools", category+ " Vanilla Recipes", true, "Remove Vanilla stone tools?");
         VanillaHandler.breadOff = config.getBoolean("Bread Recipe", category+ " Vanilla Recipes", true, "Remove Vanilla Bread Recipe?");

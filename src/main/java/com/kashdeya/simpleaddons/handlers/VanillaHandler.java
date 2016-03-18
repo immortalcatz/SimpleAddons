@@ -8,6 +8,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.CraftingManager;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.oredict.ShapedOreRecipe;
 
 import com.kashdeya.simpleaddons.init.SimpleAddonsFood;
 import com.kashdeya.simpleaddons.init.SimpleAddonsItems;
@@ -29,6 +30,14 @@ public class VanillaHandler {
 			removeRecipe(new ItemStack(Items.stone_sword));
 			removeRecipe(new ItemStack(Items.stone_shovel));
 			removeRecipe(new ItemStack(Items.stone_pickaxe));
+			
+			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.stone_axe), "rr", "rs", " s", 'r', new ItemStack(Blocks.stone), 's', new ItemStack(Items.stick)));
+			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.stone_axe), "rr", "sr", "s ", 'r', new ItemStack(Blocks.stone), 's', new ItemStack(Items.stick)));
+			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.stone_hoe), "rr", " s", " s", 'r', new ItemStack(Blocks.stone), 's', new ItemStack(Items.stick)));
+			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.stone_hoe), "rr", "s ", "s ", 'r', new ItemStack(Blocks.stone), 's', new ItemStack(Items.stick)));
+			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.stone_sword), "r", "r", "s", 'r', new ItemStack(Blocks.stone), 's', new ItemStack(Items.stick)));
+			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.stone_shovel), "r", "s", "s", 'r', new ItemStack(Blocks.stone), 's', new ItemStack(Items.stick)));
+			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.stone_pickaxe), "rrr", " s ", " s ", 'r', new ItemStack(Blocks.stone), 's', new ItemStack(Items.stick)));
 			}
 		
 		if (breadOff){

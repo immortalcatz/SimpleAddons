@@ -199,17 +199,7 @@ public class CraftingRecipes {
 			GameRegistry.addShapelessRecipe(new ItemStack(SimpleAddonsItems.gold_scrap, 4), new Object[] {new ItemStack(SimpleAddonsItems.item_dthammer, 1, OreDictionary.WILDCARD_VALUE), Items.golden_horse_armor});
 			GameRegistry.addShapelessRecipe(new ItemStack(SimpleAddonsItems.iron_scrap, 4), new Object[] {new ItemStack(SimpleAddonsItems.item_dthammer, 1, OreDictionary.WILDCARD_VALUE), Items.iron_horse_armor});
 			GameRegistry.addShapelessRecipe(new ItemStack(Items.diamond, 4), new Object[] {new ItemStack(SimpleAddonsItems.item_dthammer, 1, OreDictionary.WILDCARD_VALUE), Items.diamond_horse_armor});
-		}
-		
-		if (replaceOff){
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.stone_axe), "rr", "rs", " s", 'r', new ItemStack(Blocks.stone), 's', new ItemStack(Items.stick)));
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.stone_axe), "rr", "sr", "s ", 'r', new ItemStack(Blocks.stone), 's', new ItemStack(Items.stick)));
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.stone_hoe), "rr", " s", " s", 'r', new ItemStack(Blocks.stone), 's', new ItemStack(Items.stick)));
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.stone_hoe), "rr", "s ", "s ", 'r', new ItemStack(Blocks.stone), 's', new ItemStack(Items.stick)));
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.stone_sword), "r", "r", "s", 'r', new ItemStack(Blocks.stone), 's', new ItemStack(Items.stick)));
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.stone_shovel), "r", "s", "s", 'r', new ItemStack(Blocks.stone), 's', new ItemStack(Items.stick)));
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.stone_pickaxe), "rrr", " s ", " s ", 'r', new ItemStack(Blocks.stone), 's', new ItemStack(Items.stick)));
-		}
+		}			
 		
 		if (growthOff){
 			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(SimpleAddonsBlocks.growth_block), "CBC", "BEB", "CBC", 'C', new ItemStack(SimpleAddonsItems.crushed_obsidian), 'B', new ItemStack(Items.dye, 1, 15), 'E', new ItemStack(Items.emerald)));
@@ -217,7 +207,7 @@ public class CraftingRecipes {
 			GameRegistry.addShapedRecipe(new ItemStack(Blocks.obsidian, 2), new Object[] {"CC", "CC", 'C', new ItemStack(SimpleAddonsItems.crushed_obsidian)});
 		}
 		
-		GameRegistry.addShapedRecipe(new ItemStack(SimpleAddonsItems.knife), new Object[] {"  I", " I ", "S ", 'I', Items.iron_ingot, 'S', Items.stick});
+		GameRegistry.addShapedRecipe(new ItemStack(SimpleAddonsItems.knife), new Object[] {"I ", "I ",'I', Items.iron_ingot});
 		GameRegistry.addShapedRecipe(new ItemStack(SimpleAddonsItems.unfired_mortar), new Object[] {"C C", "C C", " C ", 'C', Items.clay_ball});
 		GameRegistry.addShapedRecipe(new ItemStack(SimpleAddonsItems.mixing_bowl), new Object[] {"B B", "BBB", 'B', Items.brick});
 		GameRegistry.addShapelessRecipe(new ItemStack(SimpleAddonsItems.mortar_pestle), new Object[] {new ItemStack(SimpleAddonsItems.fired_mortar), new ItemStack(Items.stick)});
