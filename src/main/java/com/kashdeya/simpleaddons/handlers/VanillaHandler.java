@@ -18,6 +18,8 @@ public class VanillaHandler {
 	public static boolean removeOff = false;
 	public static boolean breadOff = false;
 	public static boolean endstoneOff = false;
+	public static boolean dsOff = false;
+	public static boolean gsOff = false;
 
 	public static void initRemove() {
 		
@@ -40,6 +42,14 @@ public class VanillaHandler {
 		
 		if (endstoneOff){
 			GameRegistry.addShapedRecipe(new ItemStack(Blocks.end_stone), new Object[] {"CCC", "EDE", "CCC", 'E', Items.ender_pearl,'D', Items.diamond, 'C', Blocks.sandstone});
+		}
+		
+		if (dsOff){
+			GameRegistry.addShapedRecipe(new ItemStack(SimpleAddonsTools.diamond_shears), new Object[] {"D ", " D", 'D', Items.diamond});
+		}
+		
+		if (gsOff){
+			GameRegistry.addShapedRecipe(new ItemStack(SimpleAddonsTools.golden_shears), new Object[] {"G ", " G", 'G', Items.gold_ingot});
 		}
 		
 	}

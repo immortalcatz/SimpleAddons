@@ -6,8 +6,10 @@ import com.kashdeya.simpleaddons.Reference;
 import com.kashdeya.simpleaddons.SimpleAddons;
 import com.kashdeya.simpleaddons.items.Itemknife;
 import com.kashdeya.simpleaddons.tools.ToolsAxe;
+import com.kashdeya.simpleaddons.tools.ToolsGoldenShears;
 import com.kashdeya.simpleaddons.tools.ToolsHoe;
 import com.kashdeya.simpleaddons.tools.ToolsPickaxe;
+import com.kashdeya.simpleaddons.tools.ToolsShears;
 import com.kashdeya.simpleaddons.tools.ToolsSpade;
 import com.kashdeya.simpleaddons.tools.ToolsSword;
 
@@ -43,6 +45,8 @@ public class SimpleAddonsTools {
 	public static Item granite_axe;
 	public static Item granite_sword;
 	public static Item granite_hoe;
+	public static Item diamond_shears;
+	public static Item golden_shears;
 	
 		public static void init(){
 			
@@ -63,6 +67,9 @@ public class SimpleAddonsTools {
 			diorite_axe = new ToolsAxe(dioriteToolMaterial, new ItemStack(Blocks.stone, 1, 4)).setUnlocalizedName("diorite_axe");
 			diorite_sword = new ToolsSword(dioriteToolMaterial, new ItemStack(Blocks.stone, 1, 4)).setUnlocalizedName("diorite_sword");
 			diorite_hoe = new ToolsHoe(dioriteToolMaterial).setUnlocalizedName("diorite_hoe");
+			
+			diamond_shears = new ToolsShears().setUnlocalizedName("diamond_shears");
+			golden_shears = new ToolsGoldenShears().setUnlocalizedName("golden_shears");
 		}
 		
 		public static void register(){
@@ -84,6 +91,9 @@ public class SimpleAddonsTools {
 			GameRegistry.registerItem(granite_axe, granite_axe.getUnlocalizedName().substring(5));
 			GameRegistry.registerItem(granite_sword, granite_sword.getUnlocalizedName().substring(5));
 			GameRegistry.registerItem(granite_hoe, granite_hoe.getUnlocalizedName().substring(5));
+			
+			GameRegistry.registerItem(diamond_shears, diamond_shears.getUnlocalizedName().substring(5));
+			GameRegistry.registerItem(golden_shears, golden_shears.getUnlocalizedName().substring(5));
 		}
 		
 		public static void registerRenders(){
@@ -102,6 +112,8 @@ public class SimpleAddonsTools {
 			registerRender(granite_axe);
 			registerRender(granite_sword);
 			registerRender(granite_hoe);
+			registerRender(diamond_shears);
+			registerRender(golden_shears);
 		}
 		
 		public static void registerRender(Item item){

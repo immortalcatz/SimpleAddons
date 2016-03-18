@@ -50,6 +50,8 @@ item.item_dough.name=Dough
 item.mixing_bowl.name=Mixing Bowl
 item.crushed_obsidian.name=Crushed Obsidian
 item.rotten_leather.name=Rotten Leather
+item.diamond_shears.name=Diamond Shears
+item.golden_shears.name=Golden Shears
 
 item.andesite_pickaxe.name=Andesite Pickaxe
 item.andesite_axe.name=Andesite Axe

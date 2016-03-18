@@ -11,9 +11,9 @@ import net.minecraft.item.Item.ToolMaterial;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class Itemjuice extends Item{
+public class Itemjuicer extends Item{
 	
-	public Itemjuice() {
+	public Itemjuicer() {
 		super();
 		super.setMaxStackSize(1);
 		super.setContainerItem(this);

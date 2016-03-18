@@ -6,6 +6,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.oredict.OreDictionary;
 
 import com.kashdeya.simpleaddons.Reference;
 import com.kashdeya.simpleaddons.SimpleAddons;
@@ -13,7 +14,7 @@ import com.kashdeya.simpleaddons.items.Itembowl;
 import com.kashdeya.simpleaddons.items.Itembucket;
 import com.kashdeya.simpleaddons.items.Itemdthammer;
 import com.kashdeya.simpleaddons.items.Itemhammer;
-import com.kashdeya.simpleaddons.items.Itemjuice;
+import com.kashdeya.simpleaddons.items.Itemjuicer;
 import com.kashdeya.simpleaddons.items.Itemknife;
 import com.kashdeya.simpleaddons.items.Itemmortar;
 
@@ -43,7 +44,7 @@ public class SimpleAddonsItems {
 	public static void init(){
 		
 		knife = new Itemknife("knife", 100, knifeMaterial).setUnlocalizedName("knife");
-		item_juicer = new Itemjuice().setUnlocalizedName("item_juicer");
+		item_juicer = new Itemjuicer().setUnlocalizedName("item_juicer");
 		item_hammer = new Itemhammer("item_hammer", 150, knifeMaterial).setUnlocalizedName("item_hammer");
 		item_dthammer = new Itemdthammer("item_dthammer", 600, knifeMaterial).setUnlocalizedName("item_dthammer");
 		item_chain = new Item().setUnlocalizedName("item_chain").setCreativeTab(SimpleAddons.tabItems);
@@ -60,6 +61,10 @@ public class SimpleAddonsItems {
 		mixing_bowl = new Itembowl().setUnlocalizedName("mixing_bowl");
 		crushed_obsidian = new Item().setUnlocalizedName("crushed_obsidian").setCreativeTab(SimpleAddons.tabItems);
 		rotten_leather = new Item().setUnlocalizedName("rotten_leather").setCreativeTab(SimpleAddons.tabItems);
+		
+		OreDictionary.registerOre("dustIron", SimpleAddonsItems.iron_scrap);
+		OreDictionary.registerOre("dustGold", SimpleAddonsItems.gold_scrap);
+		OreDictionary.registerOre("dustObsidian", SimpleAddonsItems.crushed_obsidian);
 	}
 	
 	public static void register(){

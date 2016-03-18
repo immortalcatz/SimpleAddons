@@ -15,6 +15,7 @@ import com.kashdeya.simpleaddons.creativetabs.TabSimpleAddonsTools;
 import com.kashdeya.simpleaddons.handlers.ConfigHandler;
 import com.kashdeya.simpleaddons.handlers.VanillaHandler;
 import com.kashdeya.simpleaddons.init.SimpleAddonsBlocks;
+import com.kashdeya.simpleaddons.init.SimpleAddonsDrinks;
 import com.kashdeya.simpleaddons.init.SimpleAddonsFood;
 import com.kashdeya.simpleaddons.init.SimpleAddonsItems;
 import com.kashdeya.simpleaddons.init.SimpleAddonsTools;
@@ -42,6 +43,8 @@ public class SimpleAddons {
 		SimpleAddonsItems.register();
 		SimpleAddonsFood.init();
 		SimpleAddonsFood.register();
+		SimpleAddonsDrinks.init();
+		SimpleAddonsDrinks.register();
 		SimpleAddonsTools.init();
 		SimpleAddonsTools.register();
 		ConfigHandler.initConfigs();

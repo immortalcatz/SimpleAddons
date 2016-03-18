@@ -8,6 +8,7 @@ import net.minecraftforge.oredict.OreDictionary;
 import net.minecraftforge.oredict.ShapedOreRecipe;
 
 import com.kashdeya.simpleaddons.init.SimpleAddonsBlocks;
+import com.kashdeya.simpleaddons.init.SimpleAddonsDrinks;
 import com.kashdeya.simpleaddons.init.SimpleAddonsFood;
 import com.kashdeya.simpleaddons.init.SimpleAddonsItems;
 import com.kashdeya.simpleaddons.init.SimpleAddonsTools;
@@ -113,9 +114,11 @@ public class CraftingRecipes {
 		
 		if (juicesOff){
 			GameRegistry.addShapedRecipe(new ItemStack(SimpleAddonsItems.item_juicer), new Object[] {" S ", "S S", "SSS", 'S', Blocks.stone});
-			GameRegistry.addShapelessRecipe(new ItemStack(SimpleAddonsFood.apple_juice), new Object[] {Items.apple, new ItemStack(SimpleAddonsItems.item_juicer)});
-			GameRegistry.addShapelessRecipe(new ItemStack(SimpleAddonsFood.carrot_juice), new Object[] {Items.carrot, new ItemStack(SimpleAddonsItems.item_juicer)});
-			GameRegistry.addShapelessRecipe(new ItemStack(SimpleAddonsFood.cactus_juice), new Object[] {Blocks.cactus, new ItemStack(SimpleAddonsItems.item_juicer)});
+			GameRegistry.addShapelessRecipe(new ItemStack(SimpleAddonsDrinks.apple_juice), new Object[] {Items.apple, new ItemStack(SimpleAddonsItems.item_juicer)});
+			GameRegistry.addShapelessRecipe(new ItemStack(SimpleAddonsDrinks.carrot_juice), new Object[] {Items.carrot, new ItemStack(SimpleAddonsItems.item_juicer)});
+			GameRegistry.addShapelessRecipe(new ItemStack(SimpleAddonsDrinks.cactus_juice), new Object[] {Blocks.cactus, new ItemStack(SimpleAddonsItems.item_juicer)});
+			GameRegistry.addShapelessRecipe(new ItemStack(SimpleAddonsDrinks.slim_juice), new Object[] {Items.slime_ball, new ItemStack(SimpleAddonsItems.item_juicer)});
+			GameRegistry.addShapelessRecipe(new ItemStack(SimpleAddonsDrinks.watermelon_juice), new Object[] {Items.melon, new ItemStack(SimpleAddonsItems.item_juicer)});
 		}
 		
 		if (baconOff){

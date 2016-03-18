@@ -29,7 +29,7 @@ public class Itemhammer extends ItemPickaxe{
 	
 	public boolean doesContainerItemLeaveCraftingGrid(ItemStack stack)
 	{
-		return false;
+		return true;
 	}
 
 	@SideOnly(Side.CLIENT)
