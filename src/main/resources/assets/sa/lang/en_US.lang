@@ -52,6 +52,9 @@ item.crushed_obsidian.name=Crushed Obsidian
 item.rotten_leather.name=Rotten Leather
 item.diamond_shears.name=Diamond Shears
 item.golden_shears.name=Golden Shears
+item.watermelod_juice.name=Watermelon Juice
+item.slime_juice.name=Slime Juice
+item.item_salt.name=Salt
 
 item.andesite_pickaxe.name=Andesite Pickaxe
 item.andesite_axe.name=Andesite Axe

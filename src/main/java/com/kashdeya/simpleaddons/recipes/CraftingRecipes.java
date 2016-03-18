@@ -195,8 +195,10 @@ public class CraftingRecipes {
 		if (scrap1Off){
 			GameRegistry.addShapelessRecipe(new ItemStack(SimpleAddonsItems.gold_scrap, 4), new Object[] {new ItemStack(SimpleAddonsItems.item_hammer, 1, OreDictionary.WILDCARD_VALUE), Items.golden_horse_armor});
 			GameRegistry.addShapelessRecipe(new ItemStack(SimpleAddonsItems.iron_scrap, 4), new Object[] {new ItemStack(SimpleAddonsItems.item_hammer, 1, OreDictionary.WILDCARD_VALUE), Items.iron_horse_armor});
+			GameRegistry.addShapelessRecipe(new ItemStack(Items.diamond, 4), new Object[] {new ItemStack(SimpleAddonsItems.item_hammer, 1, OreDictionary.WILDCARD_VALUE), Items.diamond_horse_armor});
 			GameRegistry.addShapelessRecipe(new ItemStack(SimpleAddonsItems.gold_scrap, 4), new Object[] {new ItemStack(SimpleAddonsItems.item_dthammer, 1, OreDictionary.WILDCARD_VALUE), Items.golden_horse_armor});
 			GameRegistry.addShapelessRecipe(new ItemStack(SimpleAddonsItems.iron_scrap, 4), new Object[] {new ItemStack(SimpleAddonsItems.item_dthammer, 1, OreDictionary.WILDCARD_VALUE), Items.iron_horse_armor});
+			GameRegistry.addShapelessRecipe(new ItemStack(Items.diamond, 4), new Object[] {new ItemStack(SimpleAddonsItems.item_dthammer, 1, OreDictionary.WILDCARD_VALUE), Items.diamond_horse_armor});
 		}
 		
 		if (replaceOff){

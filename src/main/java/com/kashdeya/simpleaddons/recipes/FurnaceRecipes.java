@@ -17,6 +17,7 @@ public class FurnaceRecipes {
 	public static boolean brownOff = false;
 	public static boolean redOff = false;
 	public static boolean scrapOff = false;
+	public static boolean saltOff = false;
 
 	public static void registerFurnaceRecipies() {
 		if (cookedbaconOff){
@@ -46,6 +47,10 @@ public class FurnaceRecipes {
 		if (scrapOff){
 			GameRegistry.addSmelting(SimpleAddonsItems.gold_scrap, new ItemStack(Items.gold_ingot), 0.5F);
 			GameRegistry.addSmelting(SimpleAddonsItems.iron_scrap, new ItemStack(Items.iron_ingot), 0.5F);
+		}
+		
+		if (saltOff){
+			GameRegistry.addSmelting(SimpleAddonsItems.wooden_bucket_water, new ItemStack(SimpleAddonsFood.item_salt, 16), 0.5F);
 		}
 		
 			GameRegistry.addSmelting(SimpleAddonsItems.unfired_mortar, new ItemStack(SimpleAddonsItems.fired_mortar), 0.5F);

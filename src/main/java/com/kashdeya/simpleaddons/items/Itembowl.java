@@ -1,14 +1,9 @@
 package com.kashdeya.simpleaddons.items;
 
-import java.util.List;
-
-import com.kashdeya.simpleaddons.SimpleAddons;
-
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
+
+import com.kashdeya.simpleaddons.SimpleAddons;
 
 public class Itembowl extends Item{
 	

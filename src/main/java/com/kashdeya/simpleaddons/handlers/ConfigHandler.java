@@ -6,7 +6,6 @@ import net.minecraftforge.common.config.Configuration;
 
 import com.kashdeya.simpleaddons.recipes.CraftingRecipes;
 import com.kashdeya.simpleaddons.recipes.FurnaceRecipes;
-import com.kashdeya.simpleaddons.handlers.VanillaHandler;
 
 public class ConfigHandler
 {
@@ -76,6 +75,7 @@ public class ConfigHandler
         FurnaceRecipes.brownOff = config.getBoolean("Cooked Brown Mushroom", category+ " Furnace Recipes", true, "Enable cooked brown mushroom?");
         FurnaceRecipes.redOff = config.getBoolean("Cooked Red Mushroom", category+ " Furnace Recipes", true, "Enable cooked red mushroom?");
         FurnaceRecipes.scrapOff = config.getBoolean("Scrap Metal", category+ " Furnace Recipes", true, "Enable furnace recipe for scrap metal to ingots?");
+        FurnaceRecipes.saltOff = config.getBoolean("Salt", category+ " Furnace Recipes", true, "Enable furnace recipe for Slat?");
         
         //Fuel
         config.addCustomCategoryComment(category + " Furnace Fuels", "Furnace Fuels use 0 to DISABLE and anything above to activate");

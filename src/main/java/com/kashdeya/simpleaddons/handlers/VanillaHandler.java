@@ -2,16 +2,16 @@ package com.kashdeya.simpleaddons.handlers;
 
 import java.util.ArrayList;
 
-import com.kashdeya.simpleaddons.init.SimpleAddonsFood;
-import com.kashdeya.simpleaddons.init.SimpleAddonsItems;
-import com.kashdeya.simpleaddons.init.SimpleAddonsTools;
-
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.CraftingManager;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+
+import com.kashdeya.simpleaddons.init.SimpleAddonsFood;
+import com.kashdeya.simpleaddons.init.SimpleAddonsItems;
+import com.kashdeya.simpleaddons.init.SimpleAddonsTools;
 
 public class VanillaHandler {
 	
@@ -35,7 +35,7 @@ public class VanillaHandler {
 			removeRecipe(new ItemStack(Items.bread));
 			
 			GameRegistry.addShapelessRecipe(new ItemStack(SimpleAddonsItems.item_flour, 2), new Object[] {Items.wheat, SimpleAddonsItems.mortar_pestle});
-			GameRegistry.addShapelessRecipe(new ItemStack(SimpleAddonsItems.item_dough, 2), new Object[] {SimpleAddonsItems.item_flour, Items.potionitem, SimpleAddonsItems.mixing_bowl});
+			GameRegistry.addShapelessRecipe(new ItemStack(SimpleAddonsItems.item_dough, 2), new Object[] {SimpleAddonsItems.item_flour, SimpleAddonsFood.item_salt, SimpleAddonsItems.mixing_bowl});
 			
 			GameRegistry.addSmelting(SimpleAddonsItems.item_dough, new ItemStack(Items.bread), 0.5F);
 			}

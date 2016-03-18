@@ -3,7 +3,6 @@ package com.kashdeya.simpleaddons.init;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.EnumAction;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemStack;
@@ -23,6 +22,7 @@ public class SimpleAddonsFood extends ItemFood{
 	public static Item cooked_mushroom_brown;
 	public static Item cooked_mushroom_red;
 	public static Item bacon_eggs;
+	public static Item item_salt;
 
 	public SimpleAddonsFood(int amount, float saturation, boolean isWolfFood) {
 		super(amount, saturation, isWolfFood);
@@ -42,6 +42,7 @@ public class SimpleAddonsFood extends ItemFood{
 		cooked_mushroom_brown = new SimpleAddonsFood(2, 03F, false).setUnlocalizedName("cooked_mushroom_brown").setCreativeTab(SimpleAddons.tabFood);
 		cooked_mushroom_red = new SimpleAddonsFood(2, 03F, false).setUnlocalizedName("cooked_mushroom_red").setCreativeTab(SimpleAddons.tabFood);
 		bacon_eggs = new SimpleAddonsFood(6, 0.7F, false).setUnlocalizedName("bacon_eggs").setCreativeTab(SimpleAddons.tabFood);
+		item_salt = new Item().setUnlocalizedName("item_salt").setCreativeTab(SimpleAddons.tabFood);
 	}
 	
 	public static void register(){
@@ -53,6 +54,7 @@ public class SimpleAddonsFood extends ItemFood{
 		GameRegistry.registerItem(cooked_mushroom_brown, cooked_mushroom_brown.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(cooked_mushroom_red, cooked_mushroom_red.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(bacon_eggs, bacon_eggs.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(item_salt, item_salt.getUnlocalizedName().substring(5));
 	}
 	
 	public static void registerRenders(){
@@ -64,6 +66,7 @@ public class SimpleAddonsFood extends ItemFood{
 		registerRender(cooked_mushroom_brown);
 		registerRender(cooked_mushroom_red);
 		registerRender(bacon_eggs);
+		registerRender(item_salt);
 	}
 	
 	public static void registerRender(Item item){

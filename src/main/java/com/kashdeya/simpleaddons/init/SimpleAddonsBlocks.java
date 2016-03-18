@@ -65,6 +65,7 @@ public class SimpleAddonsBlocks {
 		broken_reed = new Blockreed().setUnlocalizedName("broken_reed");
 		growth_block = new Blockgrowth().setUnlocalizedName("growth_block");
 	}
+	
 	public static void register(){
 		GameRegistry.registerBlock(lamp_block, lamp_block.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(lamp_block_black, lamp_block_black.getUnlocalizedName().substring(5));

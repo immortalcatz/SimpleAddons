@@ -1,10 +1,14 @@
 package com.kashdeya.simpleaddons.init;
 
-import java.util.ArrayList;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.resources.model.ModelResourceLocation;
+import net.minecraft.init.Blocks;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraftforge.common.util.EnumHelper;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 import com.kashdeya.simpleaddons.Reference;
-import com.kashdeya.simpleaddons.SimpleAddons;
-import com.kashdeya.simpleaddons.items.Itemknife;
 import com.kashdeya.simpleaddons.tools.ToolsAxe;
 import com.kashdeya.simpleaddons.tools.ToolsGoldenShears;
 import com.kashdeya.simpleaddons.tools.ToolsHoe;
@@ -12,18 +16,6 @@ import com.kashdeya.simpleaddons.tools.ToolsPickaxe;
 import com.kashdeya.simpleaddons.tools.ToolsShears;
 import com.kashdeya.simpleaddons.tools.ToolsSpade;
 import com.kashdeya.simpleaddons.tools.ToolsSword;
-
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.resources.model.ModelResourceLocation;
-import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.crafting.CraftingManager;
-import net.minecraft.item.crafting.IRecipe;
-import net.minecraftforge.common.util.EnumHelper;
-import net.minecraftforge.fml.common.registry.GameRegistry;
-import net.minecraftforge.oredict.ShapedOreRecipe;
 
 public class SimpleAddonsTools {
 	public static final Item.ToolMaterial andesiteToolMaterial = EnumHelper.addToolMaterial("andesiteToolMaterial", 1, 220, 4.5F, 1.0F, 8);
