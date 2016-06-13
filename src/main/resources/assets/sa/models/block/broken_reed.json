@@ -1,6 +1,0 @@
-{
-    "parent": "block/tallgrass",
-    "textures": {
-        "cross": "sa:blocks/broken_reed"
-    }
-}
